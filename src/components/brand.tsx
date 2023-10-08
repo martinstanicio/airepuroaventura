@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+import { Button } from "./ui/button";
+
 export function Mountain(props: React.SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
@@ -22,7 +26,7 @@ export function Mountain(props: React.SVGAttributes<HTMLOrSVGElement>) {
   );
 }
 
-export default function Logo(props: React.SVGAttributes<HTMLOrSVGElement>) {
+export function Logo(props: React.SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -45,5 +49,21 @@ export default function Logo(props: React.SVGAttributes<HTMLOrSVGElement>) {
         ></path>
       </g>
     </svg>
+  );
+}
+
+export default function Brand() {
+  return (
+    <Button asChild variant="ghost" className="h-auto">
+      <Link href="/" className="flex items-center gap-4">
+        <Mountain className="h-12" />
+        <div className="sr-only flex flex-col sm:not-sr-only">
+          <span className="text-xl font-bold tracking-wide">Aire Puro</span>
+          <span className="text-sm text-muted-foreground">
+            Trekking y aventura
+          </span>
+        </div>
+      </Link>
+    </Button>
   );
 }
