@@ -56,7 +56,7 @@ export default function Brand() {
   return (
     <Button asChild variant="ghost" className="h-auto">
       <Link href="/" className="flex items-center gap-4">
-        <Mountain className="h-12" />
+        <Mountain className="h-8 sm:h-12" />
         <div className="sr-only flex flex-col sm:not-sr-only">
           <span className="text-xl font-bold tracking-wide">Aire Puro</span>
           <span className="text-sm text-muted-foreground">
