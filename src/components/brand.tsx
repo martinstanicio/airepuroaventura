@@ -54,9 +54,9 @@ export default function Brand() {
   return (
     <Link href="/" className="flex items-center gap-4">
       <Mountain className="h-8 sm:h-12" />
-      <div className="sr-only flex flex-col sm:not-sr-only">
-        <span className="text-xl font-bold tracking-wide">Aire Puro</span>
-        <span className="text-sm text-muted-foreground">
+      <div className="flex flex-col">
+        <span className="font-bold tracking-wide sm:text-xl">Aire Puro</span>
+        <span className="text-xs text-muted-foreground sm:text-sm">
           Trekking y aventura
         </span>
       </div>
