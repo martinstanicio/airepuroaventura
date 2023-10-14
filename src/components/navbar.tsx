@@ -4,7 +4,6 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 import Link from "next/link";
 
-import ThemeToggle from "./theme-toggle";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -44,8 +43,6 @@ export default function Navbar() {
               <Link href={path}>{label}</Link>
             </DropdownMenuItem>
           ))}
-          <DropdownMenuSeparator />
-          <ThemeToggle />
         </DropdownMenuContent>
       </DropdownMenu>
 
@@ -60,7 +57,6 @@ export default function Navbar() {
               </Link>
             </NavigationMenuItem>
           ))}
-          <ThemeToggle />
         </NavigationMenuList>
       </NavigationMenu>
     </nav>
