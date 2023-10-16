@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="dark bg-black text-foreground">
       <div className="mx-auto max-w-4xl space-y-12 px-4 py-8">
         <div className="flex flex-col justify-between gap-x-4 gap-y-12 sm:flex-row sm:items-center">
-          <Brand />
+          <Brand className="mx-auto sm:mx-0" />
           <div className="flex justify-evenly gap-6">
             {social.map(({ label, href, icon }, i) => (
               <a href={href} target="_blank" key={i}>
@@ -40,7 +40,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-wrap justify-between gap-4">
+        <div className="flex flex-col justify-between gap-4 text-center sm:flex-row">
           <p>Aire Puro Aventura &copy; {new Date().getFullYear()}</p>
           <p>
             Página web diseñada por{" "}
