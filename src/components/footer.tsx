@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Brand from "./brand";
+import { Button } from "./ui/button";
 
 const social = [
   {
@@ -33,10 +34,12 @@ export default function Footer() {
           <Brand className="mx-auto sm:mx-0" />
           <div className="flex justify-evenly gap-6">
             {social.map(({ label, href, icon }, i) => (
-              <a href={href} target="_blank" key={i}>
-                <FontAwesomeIcon icon={icon} className="h-6" />
-                <span className="sr-only">{label}</span>
-              </a>
+              <Button asChild variant="ghost" size="icon" key={i}>
+                <a href={href} target="_blank">
+                  <FontAwesomeIcon icon={icon} className="h-6" />
+                  <span className="sr-only">{label}</span>
+                </a>
+              </Button>
             ))}
           </div>
         </div>
