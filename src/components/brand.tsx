@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { cn } from "@/lib/utils";
+
 export function Mountain(props: React.SVGAttributes<HTMLOrSVGElement>) {
   return (
     <svg
@@ -50,9 +52,16 @@ export function Logo(props: React.SVGAttributes<HTMLOrSVGElement>) {
   );
 }
 
-export default function Brand() {
+export default function Brand({
+  className,
+  ...props
+}: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
   return (
-    <Link href="/" className="flex items-center gap-4">
+    <Link
+      href="/"
+      className={cn("flex items-center gap-4", className)}
+      {...props}
+    >
       <Mountain className="h-8 sm:h-12" />
       <div className="flex flex-col">
         <span className="font-bold tracking-wide sm:text-xl">Aire Puro</span>
