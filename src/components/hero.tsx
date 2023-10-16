@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full">
+    <section className="relative bg-zinc-900">
       <Image
         src="/hero.jpg"
         alt="Montañas de Jujuy"
@@ -17,7 +17,7 @@ export default function Hero() {
       />
       <div className="relative z-10 flex flex-col items-center justify-center gap-8 px-4 py-16">
         <Mountain className="dark h-24 sm:h-28" />
-        <h1 className="max-w-xl text-center text-2xl font-bold text-white [text-wrap:balance] md:text-4xl">
+        <h1 className="dark max-w-xl text-center text-2xl font-bold text-foreground [text-wrap:balance] md:text-4xl">
           {title}
         </h1>
         <div className="flex flex-wrap gap-4">
