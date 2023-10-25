@@ -1,6 +1,6 @@
 import { Salida } from "contentlayer/generated";
 
-import { difficulties } from "@/lib/salidas";
+import difficulties from "@/lib/difficulties";
 import { cn } from "@/lib/utils";
 
 import { Badge } from "./ui/badge";

@@ -2,12 +2,6 @@ import { notFound } from "next/navigation";
 
 import { allSalidas } from "contentlayer/generated";
 
-export const difficulties = [
-  { value: "easy", name: "facil", className: "bg-easy" },
-  { value: "medium", name: "moderada", className: "bg-medium" },
-  { value: "hard", name: "dificil", className: "bg-hard" },
-] as const;
-
 export const allSalidasSlugs = allSalidas.map(({ slug }) => ({ slug }));
 
 export const sortedSalidas = allSalidas.sort((a, b) => {

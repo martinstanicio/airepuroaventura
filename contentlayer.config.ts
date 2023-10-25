@@ -1,7 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import type { LocalDocument } from "contentlayer/source-files";
 
-import { difficulties } from "@/lib/salidas";
+import difficulties from "./src/lib/difficulties";
 
 export const Salida = defineDocumentType(() => ({
   name: "Salida",
