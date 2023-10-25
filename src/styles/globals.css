@@ -77,4 +77,8 @@
   .dark.prose {
     @apply prose-invert;
   }
+
+  .prose :is(ol, ul) {
+    @apply marker:font-bold marker:text-primary;
+  }
 }
