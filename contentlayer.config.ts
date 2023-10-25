@@ -18,6 +18,10 @@ export const Salida = defineDocumentType(() => ({
     gallery: { type: "list", of: { type: "string" } },
   },
   computedFields: {
+    slug: {
+      type: "string",
+      resolve: (s: LocalDocument) => s._raw.flattenedPath,
+    },
     url: {
       type: "string",
       resolve: (s: LocalDocument) => `/salidas/${s._raw.flattenedPath}`,
