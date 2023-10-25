@@ -1,6 +1,8 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import type { LocalDocument } from "contentlayer/source-files";
 
+import { difficulties } from "@/lib/salidas";
+
 export const Salida = defineDocumentType(() => ({
   name: "Salida",
   filePathPattern: `salidas/**/*.md`,
@@ -11,7 +13,7 @@ export const Salida = defineDocumentType(() => ({
     img: { type: "string", required: true },
     difficulty: {
       type: "enum",
-      options: ["easy", "medium", "hard"],
+      options: difficultyOptions.map(({ value }) => value),
       required: true,
     },
     tags: { type: "list", of: { type: "string" }, required: true },
