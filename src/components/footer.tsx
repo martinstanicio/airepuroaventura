@@ -36,7 +36,7 @@ export default function Footer() {
             {social.map(({ label, href, icon }, i) => (
               <Button asChild variant="ghost" size="icon" key={i}>
                 <a href={href} target="_blank">
-                  <FontAwesomeIcon icon={icon} className="h-6" />
+                  <FontAwesomeIcon icon={icon} className="text-2xl" />
                   <span className="sr-only">{label}</span>
                 </a>
               </Button>
