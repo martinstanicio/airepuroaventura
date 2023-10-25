@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/card";
 import { ARS, longDate } from "@/lib/utils";
 
-import DifficultyBadge from "./dificulty-badge";
+import DifficultyBadge from "./difficulty-badge";
 
 export default function SalidaCard({
   title,
