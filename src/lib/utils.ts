@@ -10,3 +10,7 @@ export const ARS = new Intl.NumberFormat("es-AR", {
   currency: "ARS",
   maximumFractionDigits: 0,
 });
+
+export const longDate = new Intl.DateTimeFormat("es-AR", {
+  dateStyle: "long",
+});
