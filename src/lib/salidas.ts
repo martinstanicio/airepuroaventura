@@ -3,9 +3,9 @@ import { notFound } from "next/navigation";
 import { allSalidas } from "contentlayer/generated";
 
 export const difficulties = [
-  { value: "easy", name: "facil", className: "bg-green-400" },
-  { value: "medium", name: "moderada", className: "bg-amber-400" },
-  { value: "hard", name: "dificil", className: "bg-red-400" },
+  { value: "easy", name: "facil", className: "bg-easy" },
+  { value: "medium", name: "moderada", className: "bg-medium" },
+  { value: "hard", name: "dificil", className: "bg-hard" },
 ] as const;
 
 export const allSalidasSlugs = allSalidas.map(({ slug }) => ({ slug }));
