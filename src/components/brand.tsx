@@ -59,7 +59,7 @@ export default function Brand({
   return (
     <Link
       href="/"
-      className={cn("flex items-center gap-4", className)}
+      className={cn("flex items-center gap-x-4 gap-y-2", className)}
       {...props}
     >
       <Mountain className="h-8 sm:h-12" />
