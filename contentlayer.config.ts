@@ -13,7 +13,7 @@ export const Salida = defineDocumentType(() => ({
     img: { type: "string", required: true },
     difficulty: {
       type: "enum",
-      options: difficultyOptions.map(({ value }) => value),
+      options: difficulties.map(({ value }) => value),
       required: true,
     },
     tags: { type: "list", of: { type: "string" }, required: true },
