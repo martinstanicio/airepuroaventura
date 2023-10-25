@@ -48,16 +48,6 @@ export default function SalidaPage({ params }: Props) {
           />
         </div>
       </header>
-      <section>
-        <hr />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          nesciunt ipsa ullam dignissimos excepturi rem doloremque tenetur,
-          similique perspiciatis modi quod quisquam assumenda odit quaerat quae
-          aut et. Nisi, aliquam!
-        </p>
-        <hr />
-      </section>
       <main dangerouslySetInnerHTML={{ __html: salida.body.html }} />
     </article>
   );
