@@ -20,11 +20,11 @@ export const Salida = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (s: LocalDocument) => s._raw.flattenedPath,
+      resolve: (s: LocalDocument) => s._raw.sourceFileName.slice(0, -3),
     },
     url: {
       type: "string",
-      resolve: (s: LocalDocument) => `/salidas/${s._raw.flattenedPath}`,
+      resolve: (s: LocalDocument) => s._raw.flattenedPath,
     },
   },
 }));
