@@ -1,5 +1,5 @@
 import {
-  faFacebookSquare,
+  faFacebook,
   faInstagram,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
@@ -13,7 +13,7 @@ const social = [
   {
     label: "Facebook",
     href: "https://www.facebook.com/profile.php?id=100054648900632",
-    icon: faFacebookSquare,
+    icon: faFacebook,
     color: "#0866FF",
   },
   {
