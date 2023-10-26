@@ -41,7 +41,7 @@ export default function SocialIcons({ className, ...props }: Props) {
             <FontAwesomeIcon
               icon={icon}
               className="text-3xl text-[var(--icon-color)] dark:text-foreground"
-              style={{ "--icon-color": color }}
+              style={{ "--icon-color": color } as React.CSSProperties}
             />
             <span className="sr-only">{label}</span>
           </a>
