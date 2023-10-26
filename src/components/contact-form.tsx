@@ -18,13 +18,19 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
-  name: z.string({ required_error: "Por favor ingrese un nombre." }).trim(),
+  name: z
+    .string({
+      required_error: "Por favor ingrese un nombre.",
+    })
+    .min(1, "Por favor ingrese un nombre.")
+    .trim(),
   email: z
     .string({ required_error: "Por favor ingrese un email." })
     .email("Por favor ingrese un email válido.")
     .trim(),
   message: z
     .string({ required_error: "Por favor ingrese su consulta." })
+    .min(1, "Por favor ingrese un mensaje.")
     .trim(),
 });
 
