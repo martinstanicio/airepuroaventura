@@ -40,7 +40,7 @@ export default function SocialIcons({ className, ...props }: Props) {
           <a href={href} target="_blank">
             <FontAwesomeIcon
               icon={icon}
-              className="text-2xl text-[var(--icon-color)] dark:text-foreground"
+              className="text-3xl text-[var(--icon-color)] dark:text-foreground"
               style={{ "--icon-color": color }}
             />
             <span className="sr-only">{label}</span>
