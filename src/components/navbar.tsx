@@ -1,6 +1,7 @@
 "use client";
 
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Link from "next/link";
 
@@ -38,7 +39,7 @@ export default function Navbar() {
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="md:hidden">
-            <HamburgerMenuIcon className="aspect-square h-4" />
+            <FontAwesomeIcon icon={faBars} />
             <span className="sr-only">Menu</span>
           </Button>
         </SheetTrigger>
