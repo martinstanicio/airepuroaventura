@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="relative grid place-items-center md:order-last md:px-4 md:pb-16 md:pt-4">
         <svg
           viewBox="0 0 100 63"
-          className="absolute bottom-0 right-0 max-md:hidden"
+          className="absolute bottom-0 right-0 h-full max-md:hidden"
         >
           <path
             d="M100 3C100 3 82.5 3 80 13.5C75.9676 26.4784 86.5 41.5 70.5 54C55.7753 65.5037 41.5 38 20.5 49C11.9123 53.4983 10 63 10 63"
