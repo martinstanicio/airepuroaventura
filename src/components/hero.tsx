@@ -3,29 +3,51 @@ import Link from "next/link";
 
 import { title } from "@/lib/metadata";
 
-import { Mountain } from "./brand";
 import { Button } from "./ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative bg-zinc-900">
-      <Image
-        src="/hero.jpg"
-        alt="Montañas de Jujuy"
-        fill
-        className="object-cover object-center brightness-[.4]"
-      />
-      <div className="relative z-10 flex flex-col items-center justify-center gap-8 px-4 py-16">
-        <Mountain className="dark h-24 sm:h-28" />
-        <h1 className="dark max-w-xl text-center text-2xl font-bold text-foreground [text-wrap:balance] md:text-4xl">
-          {title}
-        </h1>
-        <div className="flex flex-wrap gap-4">
-          <Button asChild size="lg">
-            <Link href="/salidas">Salidas</Link>
+    <section className="relative grid md:grid-cols-2">
+      <div className="relative grid place-items-center md:order-last md:px-4 md:pb-16 md:pt-4">
+        <svg
+          viewBox="0 0 100 63"
+          className="absolute bottom-0 right-0 max-md:hidden"
+        >
+          <path
+            d="M100 3C100 3 82.5 3 80 13.5C75.9676 26.4784 86.5 41.5 70.5 54C55.7753 65.5037 41.5 38 20.5 49C11.9123 53.4983 10 63 10 63"
+            className="fill-none stroke-logo-yellow stroke-2"
+            strokeDasharray="5"
+            strokeLinecap="round"
+          />
+        </svg>
+        <div className="relative aspect-[4/3] w-full max-md:max-h-64 md:max-w-[24rem]">
+          <Image
+            src="/hero.jpg"
+            alt="Todos los participantes de una salida de cicloturismo al llegar a destino"
+            fill
+            priority
+            className="object-cover object-center md:overflow-hidden md:rounded-md md:shadow-lg"
+            sizes="(min-width: 1020px) 384px, (min-width: 780px) calc(11.82vw + 266px), 100vw"
+          />
+        </div>
+      </div>
+      <div className="prose relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-4 prose-a:no-underline">
+        <h1 className="[text-wrap:balance]">{title}</h1>
+        <p className="lead mt-0">
+          Participá de inolvidables excursiones con nuestros guías expertos, y
+          conocé más de la cultura de este hermoso país.
+        </p>
+        <div className="flex w-full gap-4">
+          <Button asChild size="lg" className="max-md:flex-grow">
+            <Link href="/salidas">Ver salidas</Link>
           </Button>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/educacion">Educación</Link>
+          <Button
+            asChild
+            size="lg"
+            variant="secondary"
+            className="max-md:flex-grow"
+          >
+            <Link href="/contacto">Contacto</Link>
           </Button>
         </div>
       </div>
