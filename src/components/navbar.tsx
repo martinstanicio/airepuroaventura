@@ -38,7 +38,11 @@ export default function Navbar() {
     <div>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="md:hidden">
+          <Button
+            variant="outline"
+            size="icon"
+            className="text-foreground transition-colors md:hidden"
+          >
             <FontAwesomeIcon icon={faBars} />
             <span className="sr-only">Menu</span>
           </Button>
@@ -75,7 +79,12 @@ export default function Navbar() {
           {links.map(({ label, path }, i) => (
             <NavigationMenuItem key={i}>
               <Link href={path} legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "text-foreground transition-colors",
+                  )}
+                >
                   {label}
                 </NavigationMenuLink>
               </Link>

@@ -1,11 +1,30 @@
+"use client";
+
+import { useInView } from "react-intersection-observer";
+
+import { cn } from "@/lib/utils";
+
 import Brand from "./brand";
 import Navbar from "./navbar";
 
 export default function Header() {
+  const { ref, inView } = useInView({
+    initialInView: true,
+    fallbackInView: false,
+  });
+
   return (
-    <header className="flex items-center justify-between p-4">
-      <Brand />
-      <Navbar />
-    </header>
+    <>
+      <header
+        className={cn(
+          "sticky top-0 z-50 flex items-center justify-between bg-background p-4 transition-colors",
+          !inView && "dark",
+        )}
+      >
+        <Brand />
+        <Navbar />
+      </header>
+      <div ref={ref} />
+    </>
   );
 }
