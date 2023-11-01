@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 export default function Hero() {
   return (
     <section className="relative grid md:grid-cols-2">
-      <div className="relative grid place-items-center md:order-last md:px-4 md:pb-16 md:pt-4">
+      <div className="relative grid place-items-center md:order-last md:pb-16 md:pl-8 md:pr-4 md:pt-4">
         <svg
           viewBox="0 0 100 63"
           className="absolute bottom-0 right-0 h-full max-md:hidden"
@@ -31,9 +31,9 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="prose relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-4 prose-a:no-underline">
+      <div className="prose relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-4 prose-a:no-underline md:pr-0">
         <h1 className="[text-wrap:balance]">{title}</h1>
-        <p className="lead mt-0">
+        <p className="lead mt-0 md:w-3/4">
           Participá de inolvidables excursiones y conocé más de la cultura de
           este hermoso país.
         </p>
