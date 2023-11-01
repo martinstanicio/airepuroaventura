@@ -34,8 +34,8 @@ export default function Hero() {
       <div className="prose relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-4 prose-a:no-underline">
         <h1 className="[text-wrap:balance]">{title}</h1>
         <p className="lead mt-0">
-          Participá de inolvidables excursiones con nuestros guías expertos, y
-          conocé más de la cultura de este hermoso país.
+          Participá de inolvidables excursiones y conocé más de la cultura de
+          este hermoso país.
         </p>
         <div className="flex w-full gap-4">
           <Button asChild size="lg" className="max-md:flex-grow">
