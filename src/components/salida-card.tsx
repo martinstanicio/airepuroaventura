@@ -40,7 +40,7 @@ export default function SalidaCard({
       <CardHeader className="space-y-4">
         <div className="relative flex gap-2 overflow-hidden after:absolute after:right-0 after:h-full after:w-4 after:bg-gradient-to-l after:from-card">
           <DifficultyBadge difficulty={difficulty} />
-          {tags.slice(0, 2).map((tag, i) => (
+          {tags.map((tag, i) => (
             <Badge key={i} variant="secondary">
               {tag}
             </Badge>
