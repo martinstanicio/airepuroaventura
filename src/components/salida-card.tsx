@@ -1,3 +1,5 @@
+import { HTMLAttributes, forwardRef } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,17 +19,11 @@ import { ARS, longDate } from "@/lib/utils";
 
 import DifficultyBadge from "./difficulty-badge";
 
-export default function SalidaCard({
-  title,
-  date,
-  price,
-  img,
-  difficulty,
-  tags,
-  url,
-}: Salida) {
-  return (
-    <Card>
+export type Props = HTMLAttributes<HTMLDivElement> & Salida;
+
+const SalidaCard = forwardRef<HTMLDivElement, Props>(
+  ({ title, date, price, img, difficulty, tags, url, ...props }, ref) => (
+    <Card ref={ref} {...props}>
       <CardImage>
         <Image
           src={img}
@@ -59,5 +55,8 @@ export default function SalidaCard({
         <span className="font-bold">{ARS.format(price)}</span>
       </CardFooter>
     </Card>
-  );
-}
+  ),
+);
+SalidaCard.displayName = "SalidaCard";
+
+export default SalidaCard;
