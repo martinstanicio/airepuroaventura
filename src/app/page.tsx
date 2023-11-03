@@ -61,6 +61,21 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <div className="bg-primary text-primary-foreground">
+          <section className="container max-w-4xl space-y-4 py-8 md:text-center">
+            <div className="dark prose">
+              <h2>Contactanos</h2>
+              <p>
+                Ponte en contacto con nuestros guías expertos, quienes te
+                brindaran la información que necesites. Nos comprometemos a
+                responder lo antes posible.
+              </p>
+            </div>
+            <Button asChild variant="secondary" className="max-md:w-full">
+              <Link href="/contacto">Contacto</Link>
+            </Button>
+          </section>
+        </div>
       </main>
     </>
   );
