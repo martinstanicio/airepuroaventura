@@ -57,13 +57,14 @@ export default function Navbar() {
             <NavigationMenuList className="flex-col space-x-0 space-y-3">
               {links.map(({ label, path }, i) => (
                 <NavigationMenuItem key={i}>
-                  <Link href={path} legacyBehavior passHref>
-                    <NavigationMenuLink
+                  <SheetClose asChild>
+                    <Link
+                      href={path}
                       className={cn(navigationMenuTriggerStyle(), "text-lg")}
                     >
-                      <SheetClose>{label}</SheetClose>
-                    </NavigationMenuLink>
-                  </Link>
+                      {label}
+                    </Link>
+                  </SheetClose>
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
