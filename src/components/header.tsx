@@ -18,7 +18,7 @@ export default function Header() {
       <div ref={ref} />
       <header
         className={cn(
-          "sticky top-0 z-50 flex items-center justify-between bg-background p-4 transition-colors",
+          "sticky top-0 z-50 flex items-center justify-between bg-background p-4 transition-colors dark:border-b",
           !inView && "dark",
         )}
       >
