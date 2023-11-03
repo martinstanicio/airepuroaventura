@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Hero />
       <main>
-        <div className="bg-secondary">
+        <div className="bg-secondary text-secondary-foreground">
           <section className="container grid max-w-4xl gap-8 py-8 md:grid-cols-2">
             <div className="relative h-full max-md:aspect-[4/3]">
               <Image
