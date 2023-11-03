@@ -5,7 +5,8 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 222.2 84% 7.5%;
+    --headings: 188 57% 15%;
     --card: var(--background);
     --card-foreground: var(--foreground);
     --popover: var(--background);
@@ -34,7 +35,8 @@
 
   .dark {
     --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --foreground: 210 40% 90%;
+    --headings: 188 57% 95%;
     --card: var(--background);
     --card-foreground: var(--foreground);
     --popover: var(--background);
@@ -70,15 +72,6 @@
   }
 
   .prose {
-    @apply prose-zinc mx-auto;
-  }
-
-  .dark .prose,
-  .dark.prose {
-    @apply prose-invert;
-  }
-
-  .prose :is(ol, ul) {
-    @apply marker:font-bold marker:text-primary;
+    @apply mx-auto marker:prose-li:!font-bold;
   }
 }
