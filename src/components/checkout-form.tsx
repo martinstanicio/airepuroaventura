@@ -55,7 +55,7 @@ export function CheckoutForm({ className, ...props }: Props) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn("space-y-8", className)}
+        className={cn("space-y-4", className)}
         {...props}
       >
         <FormField
