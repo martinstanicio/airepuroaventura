@@ -29,7 +29,7 @@ const SalidaCard = forwardRef<HTMLDivElement, Props>(
           src={img}
           alt={title}
           fill
-          className="object-cover object-center"
+          className="bg-muted object-cover object-center"
         />
       </CardImage>
 
