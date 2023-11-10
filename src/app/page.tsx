@@ -61,9 +61,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="bg-primary text-primary-foreground">
+        <div className="bg-primary">
           <section className="container max-w-4xl space-y-4 py-8 md:text-center">
-            <div className="dark prose">
+            <div className="dark prose text-primary-foreground">
               <h2>Contactanos</h2>
               <p>
                 Ponte en contacto con nuestros guías expertos, quienes te
