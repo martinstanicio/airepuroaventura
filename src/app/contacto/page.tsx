@@ -1,12 +1,13 @@
 import { Metadata } from "next";
 
-import { ContactForm } from "@/components/contact-form";
+// import { ContactForm } from "@/components/contact-form";
 import SocialIcons from "@/components/social-icons";
-import { Separator } from "@/components/ui/separator";
+
+// import { Separator } from "@/components/ui/separator";
 
 const title = "Contactanos";
 const description =
-  "Puedes encontrarnos en Facebook e Instagram para ver las últimas novedades. También puedes comunicarte con nosotros mediante WhatsApp o el formulario que encontrarás a continuación.";
+  "Puedes encontrarnos en Facebook e Instagram para ver las últimas novedades. También puedes comunicarte con nosotros mediante WhatsApp.";
 const url = "/contacto";
 
 export const metadata: Metadata = {
@@ -28,11 +29,11 @@ export default function Contacto() {
           brindarte la información y el apoyo que necesitas.
         </p>
       </header>
-      <Separator />
+      {/* <Separator />
       <section className="prose">
         <h2>Formulario</h2>
         <ContactForm />
-      </section>
+      </section> */}
     </main>
   );
 }
