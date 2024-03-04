@@ -29,8 +29,8 @@ import {
 const links = [
   { label: "Inicio", path: "/" },
   { label: "Salidas", path: "/salidas" },
-  { label: "Sobre nosotros", path: "/sobre-nosotros" },
-  { label: "Educación", path: "/educacion" },
+  // { label: "Sobre nosotros", path: "/sobre-nosotros" },
+  // { label: "Educación", path: "/educacion" },
   { label: "Contacto", path: "/contacto" },
 ];
 

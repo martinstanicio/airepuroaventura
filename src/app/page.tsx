@@ -34,9 +34,9 @@ export default function Home() {
                 comprometidos a brindar a nuestros viajeros{" "}
                 <strong>aventuras inolvidables</strong>.
               </p>
-              <Button asChild className="max-md:w-full">
+              {/* <Button asChild className="max-md:w-full">
                 <Link href="/sobre-nosotros">Sobre nosotros</Link>
-              </Button>
+              </Button> */}
             </div>
           </section>
         </div>
