@@ -10,7 +10,9 @@ export default function Footer() {
           <SocialIcons />
         </div>
         <div className="flex flex-col justify-between gap-4 text-center sm:flex-row">
-          <p>Aire Puro Aventura &copy; {new Date().getFullYear()}</p>
+          <p>
+            Aire Puro: Trekking y Aventura &copy; {new Date().getFullYear()}
+          </p>
           <p>
             Página web diseñada por{" "}
             <a
