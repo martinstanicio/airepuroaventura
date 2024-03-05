@@ -2,7 +2,7 @@
 title: "Cicloturismo: Otamendi y las balsas del Paraná"
 date: 2023-06-25T08:30
 price: 16900
-img: /salidas/cicloturismo-otamendi-y-las-balsas-del-parana.jpg
+img: /salidas/20230625-cicloturismo-otamendi-y-las-balsas-del-parana.jpg
 difficulty: medium
 tags:
   - cicloturismo

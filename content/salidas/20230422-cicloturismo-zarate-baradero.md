@@ -2,7 +2,7 @@
 title: "Cicloturismo: Zarate - Baradero"
 date: 2023-04-22T08:30
 price: 16900
-img: /salidas/cicloturismo-zarate-baradero.jpg
+img: /salidas/20230422-cicloturismo-zarate-baradero.jpg
 difficulty: medium
 tags:
   - cicloturismo

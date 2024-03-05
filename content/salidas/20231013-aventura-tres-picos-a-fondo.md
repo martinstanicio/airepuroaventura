@@ -2,7 +2,7 @@
 title: "Aventura: Tres Picos a fondo"
 date: 2023-10-13T08:30
 price: 67900
-img: /salidas/aventura-tres-picos-a-fondo.jpg
+img: /salidas/20231013-aventura-tres-picos-a-fondo.jpg
 difficulty: medium
 tags:
   - aventura

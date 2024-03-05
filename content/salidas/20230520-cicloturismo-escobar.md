@@ -2,7 +2,7 @@
 title: "Cicloturismo: Escobar - A puro pedal en la capital de la flor"
 date: 2023-05-20T08:30
 price: 11900
-img: /salidas/cicloturismo-escobar.jpg
+img: /salidas/20230520-cicloturismo-escobar.jpg
 difficulty: medium
 tags:
   - cicloturismo

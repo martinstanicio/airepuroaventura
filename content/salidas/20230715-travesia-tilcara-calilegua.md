@@ -2,7 +2,7 @@
 title: "Travesía: Tilcara - Calilegua"
 date: 2023-07-15T14:00
 price: 159200
-img: /salidas/travesia-tilcara-calilegua.jpg
+img: /salidas/20230715-travesia-tilcara-calilegua.jpg
 difficulty: hard
 tags:
   - travesia

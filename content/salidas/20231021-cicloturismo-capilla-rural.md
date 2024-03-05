@@ -2,7 +2,7 @@
 title: "Cicloturismo: Capilla rural"
 date: 2023-10-21T08:30
 price: 21000
-img: /salidas/cicloturismo-capilla-rural.jpg
+img: /salidas/20231021-cicloturismo-capilla-rural.jpg
 difficulty: easy
 tags:
   - cicloturismo

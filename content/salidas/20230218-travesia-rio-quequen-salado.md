@@ -2,7 +2,7 @@
 title: "Travesía: Río Quequén Salado"
 date: 2023-02-18T08:30
 price: 49800
-img: /salidas/travesia-rio-quequen-salado.jpg
+img: /salidas/20230218-travesia-rio-quequen-salado.jpg
 difficulty: easy
 tags:
   - travesia
