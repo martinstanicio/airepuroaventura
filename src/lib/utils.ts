@@ -13,4 +13,5 @@ export const ARS = new Intl.NumberFormat("es-AR", {
 
 export const longDate = new Intl.DateTimeFormat("es-AR", {
   dateStyle: "long",
+  timeZone: "UTC",
 });
