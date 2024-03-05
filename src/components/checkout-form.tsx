@@ -17,7 +17,9 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 
-export type Props = React.HTMLAttributes<HTMLFormElement>;
+export type Props = React.HTMLAttributes<HTMLFormElement> & {
+  salidaTitle: string;
+};
 
 const formSchema = z.object({
   firstName: z
@@ -32,23 +34,28 @@ const formSchema = z.object({
     })
     .min(1, "Por favor ingrese su apellido.")
     .trim(),
-  email: z
-    .string({ required_error: "Por favor ingrese un email." })
-    .email("Por favor ingrese un email válido.")
-    .trim(),
-  tel: z
-    .string({ required_error: "Por favor ingrese su número de teléfono." })
-    .min(1, "Por favor ingrese su número de teléfono.")
-    .trim(),
 });
 
-export function CheckoutForm({ className, ...props }: Props) {
+export function CheckoutForm({ className, salidaTitle, ...props }: Props) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    if (typeof process.env.NEXT_PUBLIC_PHONE === "undefined") {
+      throw new Error("NEXT_PUBLIC_PHONE can't be undefined");
+    }
+
+    const phone = process.env.NEXT_PUBLIC_PHONE;
+
+    const link = new URL("https://api.whatsapp.com/send");
+    link.searchParams.append("phone", phone);
+    link.searchParams.append(
+      "text",
+      `Hola, soy ${values.lastName}, ${values.firstName}. Quiero reservar un lugar en la próxima salida turística: "${salidaTitle}".`,
+    );
+
+    if (typeof window !== "undefined") window.open(link, "_blank");
   }
 
   return (
@@ -79,34 +86,6 @@ export function CheckoutForm({ className, ...props }: Props) {
               <FormLabel>Apellido</FormLabel>
               <FormControl>
                 <Input placeholder="García" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="carlos@gmail.com" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="tel"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Teléfono</FormLabel>
-              <FormControl>
-                <Input type="tel" placeholder="+54 9 348 401-2345" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -78,7 +78,7 @@ export default function SalidaPage({ params }: Props) {
             ¡Reserva tu lugar ahora para no perderte de esta extraordinaria
             aventura!
           </p>
-          <CheckoutForm className="not-prose" />
+          <CheckoutForm className="not-prose" salidaTitle={title} />
         </section>
       </div>
     </article>
