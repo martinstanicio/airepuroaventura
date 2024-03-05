@@ -16,7 +16,7 @@ export default function Footer() {
           <p>
             Página web diseñada por{" "}
             <a
-              href="mailto:staniciomartin@gmail.com"
+              href="https://www.linkedin.com/in/martinstanicio/"
               target="_blank"
               className="font-bold text-primary hover:underline focus:underline"
             >
