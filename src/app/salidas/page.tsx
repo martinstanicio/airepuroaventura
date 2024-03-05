@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import SalidaCard from "@/components/salida-card";
-import { sortedSalidas } from "@/lib/salidas";
+import { pastSalidas, upcomingSalidas } from "@/lib/salidas";
 
 const title = "Salidas turísticas";
 const description =
@@ -22,11 +22,36 @@ export default function Salidas() {
         <h1>{title}</h1>
         <p>{description}</p>
       </header>
-      <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fill,minmax(25ch,1fr))] gap-4">
-        {sortedSalidas.map((salida, i) => (
-          <SalidaCard key={i} {...salida} />
-        ))}
-      </div>
+      {upcomingSalidas.length > 0 && (
+        <section className="space-y-4">
+          <div className="prose">
+            <h2>Próximas salidas</h2>
+          </div>
+          <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fill,minmax(25ch,1fr))] gap-4">
+            {upcomingSalidas.map((salida, i) => (
+              <SalidaCard key={i} {...salida} />
+            ))}
+          </div>
+        </section>
+      )}
+      {pastSalidas.length > 0 && (
+        <section className="space-y-4">
+          <div className="prose">
+            <h2>Salidas pasadas</h2>
+            <p>
+              <strong>Atención:</strong> estas son salidas turisticas que
+              realizamos en el pasado, y están en nuestra plataforma únicamente
+              a modo informativo para aquellos que quieran ver qué tipo de
+              actividades solemos realizar regularmente.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fill,minmax(25ch,1fr))] gap-4">
+            {pastSalidas.map((salida, i) => (
+              <SalidaCard key={i} {...salida} />
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }

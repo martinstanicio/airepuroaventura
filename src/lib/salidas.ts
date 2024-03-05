@@ -6,7 +6,7 @@ export const allSalidasSlugs = allSalidas.map(({ slug }) => ({ slug }));
 
 export const sortedSalidas = allSalidas.sort((a, b) => {
   if (a.date && b.date) {
-    return Date.parse(a.date) - Date.parse(b.date);
+    return Date.parse(b.date) - Date.parse(a.date);
   }
 
   if (a.title > b.title) return 1;
@@ -14,7 +14,15 @@ export const sortedSalidas = allSalidas.sort((a, b) => {
   return 0;
 });
 
-export const upcomingSalidas = sortedSalidas.slice(0, 3);
+export const upcomingSalidas = sortedSalidas.filter(
+  ({ date }) => new Date(date) > new Date(),
+);
+
+export const pastSalidas = sortedSalidas.filter(
+  ({ date }) => new Date(date) < new Date(),
+);
+
+export const featuredSalidas = upcomingSalidas.slice(0, 3);
 
 export function findSalida(slug: string) {
   const salida = allSalidas.find((s) => s.slug === slug);

@@ -52,7 +52,9 @@ const SalidaCard = forwardRef<HTMLDivElement, Props>(
         <Button asChild>
           <Link href={url}>Ver salida</Link>
         </Button>
-        <span className="font-bold">{ARS.format(price)}</span>
+        {new Date(date) > new Date() && (
+          <span className="font-bold">{ARS.format(price)}</span>
+        )}
       </CardFooter>
     </Card>
   ),

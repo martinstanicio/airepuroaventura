@@ -4,7 +4,8 @@ import Link from "next/link";
 import Hero from "@/components/hero";
 import SalidaCard from "@/components/salida-card";
 import { Button } from "@/components/ui/button";
-import { upcomingSalidas } from "@/lib/salidas";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { featuredSalidas } from "@/lib/salidas";
 
 export default function Home() {
   return (
@@ -48,15 +49,34 @@ export default function Home() {
               aventuras, brindándote seguridad y experiencias inolvidables.
             </p>
           </header>
-          <div>
-            <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fit,minmax(25ch,1fr))] grid-rows-3 gap-x-4 overflow-y-hidden [grid-auto-rows:0] sm:grid-rows-1">
-              {upcomingSalidas.map((salida, i) => (
-                <SalidaCard className="mb-4" key={i} {...salida} />
-              ))}
-            </div>
+          <div className="space-y-4">
+            {featuredSalidas.length > 0 ? (
+              <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fit,minmax(25ch,1fr))] grid-rows-3 gap-x-4 overflow-y-hidden [grid-auto-rows:0] sm:grid-rows-1">
+                {featuredSalidas.map((salida, i) => (
+                  <SalidaCard className="mb-4" key={i} {...salida} />
+                ))}
+              </div>
+            ) : (
+              <Card className="mx-auto max-w-md">
+                <CardHeader>
+                  <CardTitle>Ups!</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Actualmente no tenemos salidas planeadas, ¡asegurate de
+                    seguirnos en nuestras redes sociales para ser el primero en
+                    enterarte de nuestro próximo destino!
+                  </p>
+                </CardContent>
+              </Card>
+            )}
             <div className="flex justify-center">
               <Button asChild size="lg" className="max-md:w-full">
-                <Link href="/salidas">Ver todas las salidas</Link>
+                <Link href="/salidas">
+                  {featuredSalidas.length > 0
+                    ? "Ver todas las salidas"
+                    : "Ver salidas pasadas"}
+                </Link>
               </Button>
             </div>
           </div>
