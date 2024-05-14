@@ -37,17 +37,13 @@ const formSchema = z.object({
 });
 
 export function CheckoutForm({ className, salidaTitle, ...props }: Props) {
+  const phone = process.env.NEXT_PUBLIC_PHONE;
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    if (typeof process.env.NEXT_PUBLIC_PHONE === "undefined") {
-      throw new Error("NEXT_PUBLIC_PHONE can't be undefined");
-    }
-
-    const phone = process.env.NEXT_PUBLIC_PHONE;
-
     const link = new URL("https://api.whatsapp.com/send");
     link.searchParams.append("phone", phone);
     link.searchParams.append(

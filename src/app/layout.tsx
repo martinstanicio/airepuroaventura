@@ -5,11 +5,14 @@ import { Inter } from "next/font/google";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { envVariables } from "@/lib/env";
 import "@/styles/globals.css";
 
 faConfig.autoAddCss = false;
 
 const font = Inter({ subsets: ["latin"] });
+
+envVariables.parse(process.env);
 
 export { metadata } from "@/lib/metadata";
 
