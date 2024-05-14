@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { allSalidas } from "contentlayer/generated";
+import { Salida, allSalidas } from "contentlayer/generated";
 
 export const allSalidasSlugs = allSalidas.map(({ slug }) => ({ slug }));
 
@@ -14,13 +14,14 @@ export const sortedSalidas = allSalidas.sort((a, b) => {
   return 0;
 });
 
-export const upcomingSalidas = sortedSalidas.filter(
-  ({ date }) => new Date(date) > new Date(),
-);
+export const isUpcomingSalida = ({ date }: Salida) =>
+  new Date(date) > new Date();
 
-export const pastSalidas = sortedSalidas.filter(
-  ({ date }) => new Date(date) < new Date(),
-);
+export const isPastSalida = ({ date }: Salida) => new Date(date) < new Date();
+
+export const upcomingSalidas = sortedSalidas.filter(isUpcomingSalida);
+
+export const pastSalidas = sortedSalidas.filter(isPastSalida);
 
 export const featuredSalidas = upcomingSalidas.slice(0, 3);
 
