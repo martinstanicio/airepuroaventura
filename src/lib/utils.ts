@@ -11,6 +11,13 @@ export const ARS = new Intl.NumberFormat("es-AR", {
   maximumFractionDigits: 0,
 });
 
+export const shortDate = new Intl.DateTimeFormat("es-AR", {
+  timeZone: "UTC",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
 export const longDate = new Intl.DateTimeFormat("es-AR", {
   dateStyle: "long",
   timeZone: "UTC",
