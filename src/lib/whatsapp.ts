@@ -30,5 +30,8 @@ export function formatPhoneNumber(
 
   const lineNumber = phoneString.slice(index);
 
-  return `+${countryCode} ${mobileConnectionPrefix} ${areaCode} ${lineNumber.slice(0, lineNumber.length / 2)}-${lineNumber.slice(lineNumber.length / 2)}`;
+  return `+${countryCode} ${mobileConnectionPrefix} ${areaCode} ${lineNumber.slice(
+    0,
+    lineNumber.length / 2,
+  )}-${lineNumber.slice(lineNumber.length / 2)}`;
 }
