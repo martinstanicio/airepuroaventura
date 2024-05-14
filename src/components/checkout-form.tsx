@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { cn } from "@/lib/utils";
+import { getWhatsAppLink } from "@/lib/whatsapp";
 
 import { Button } from "./ui/button";
 import {
@@ -37,18 +38,14 @@ const formSchema = z.object({
 });
 
 export function CheckoutForm({ className, salidaTitle, ...props }: Props) {
-  const phone = process.env.NEXT_PUBLIC_PHONE;
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    const link = new URL("https://api.whatsapp.com/send");
-    link.searchParams.append("phone", phone);
-    link.searchParams.append(
-      "text",
-      `Hola, soy ${values.lastName}, ${values.firstName}. Quiero reservar un lugar en la próxima salida turística: "${salidaTitle}".`,
+    const link = getWhatsAppLink(
+      +process.env.NEXT_PUBLIC_PHONE,
+      `Hola, soy ${values.lastName}, ${values.firstName}. Quiero reservar un lugar en la próxima salida turística: *${salidaTitle}*.`,
     );
 
     if (typeof window !== "undefined") window.open(link, "_blank");
