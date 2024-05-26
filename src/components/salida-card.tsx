@@ -19,15 +19,30 @@ import { ARS, longDate } from "@/lib/utils";
 
 import DifficultyBadge from "./difficulty-badge";
 
-export type Props = HTMLAttributes<HTMLDivElement> & Salida;
+export type Props = HTMLAttributes<HTMLDivElement> &
+  Salida & { priority?: boolean };
 
 const SalidaCard = forwardRef<HTMLDivElement, Props>(
-  ({ title, date, price, img, difficulty, tags, url, ...props }, ref) => (
+  (
+    {
+      title,
+      date,
+      price,
+      img,
+      difficulty,
+      tags,
+      url,
+      priority = false,
+      ...props
+    },
+    ref,
+  ) => (
     <Card ref={ref} {...props}>
       <CardImage>
         <Image
           src={img}
           alt={title}
+          priority={priority}
           fill
           className="bg-muted object-cover object-center"
         />

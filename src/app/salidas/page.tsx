@@ -1,7 +1,9 @@
 import { Metadata } from "next";
 
 import SalidaCard from "@/components/salida-card";
-import { pastSalidas, upcomingSalidas } from "@/lib/salidas";
+import SalidasGrid from "@/components/salidas-grid";
+import SearchControls from "@/components/search-controls";
+import { pastSalidas, sortedSalidas, upcomingSalidas } from "@/lib/salidas";
 
 const title = "Salidas turísticas";
 const description =
@@ -17,41 +19,18 @@ export const metadata: Metadata = {
 
 export default function Salidas() {
   return (
-    <main className="container space-y-8 py-8">
-      <header className="prose">
+    <div className="container min-h-screen max-w-prose space-y-8 py-8 md:max-w-6xl">
+      <header className="prose md:text-center">
         <h1>{title}</h1>
-        <p>{description}</p>
       </header>
-      {upcomingSalidas.length > 0 && (
-        <section className="space-y-4">
-          <div className="prose">
-            <h2>Próximas salidas</h2>
-          </div>
-          <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fill,minmax(25ch,1fr))] gap-4">
-            {upcomingSalidas.map((salida, i) => (
-              <SalidaCard key={i} {...salida} />
-            ))}
-          </div>
-        </section>
-      )}
-      {pastSalidas.length > 0 && (
-        <section className="space-y-4">
-          <div className="prose">
-            <h2>Salidas pasadas</h2>
-            <p>
-              <strong>Atención:</strong> estas son salidas turisticas que
-              realizamos en el pasado, y están en nuestra plataforma únicamente
-              a modo informativo para aquellos que quieran ver qué tipo de
-              actividades solemos realizar regularmente.
-            </p>
-          </div>
-          <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fill,minmax(25ch,1fr))] gap-4">
-            {pastSalidas.map((salida, i) => (
-              <SalidaCard key={i} {...salida} />
-            ))}
-          </div>
-        </section>
-      )}
-    </main>
+      <div className="space-y-8">
+        <SearchControls className="top-32 self-start" />
+        <SalidasGrid
+          as="main"
+          salidas={sortedSalidas}
+          className="xl:order-first xl:col-span-3"
+        />
+      </div>
+    </div>
   );
 }
