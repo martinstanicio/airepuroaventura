@@ -89,9 +89,9 @@ export default function Home() {
           <div className="prose">
             <h2>Contactanos</h2>
             <p>
-              Ponte en contacto con nuestros guías expertos, quienes te
-              brindaran la información que necesites. Nos comprometemos a
-              responder lo antes posible.
+              Ponte en contacto con nuestros <strong>guías expertos</strong>,
+              quienes te brindaran la información que necesites. Nos
+              comprometemos a responder lo antes posible.
             </p>
           </div>
           <Button asChild className="max-md:w-full">
