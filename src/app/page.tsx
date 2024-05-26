@@ -2,9 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Hero from "@/components/hero";
-import SalidaCard from "@/components/salida-card";
+import SalidasGrid from "@/components/salidas-grid";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { featuredSalidas } from "@/lib/salidas";
 
@@ -40,48 +39,34 @@ export default function Home() {
           </div>
         </section>
 
-        <Separator />
+        {featuredSalidas.length > 0 && (
+          <>
+            <Separator />
 
-        <section className="container space-y-8 py-16">
-          <header className="prose md:text-center">
-            <h2>Próximas salidas</h2>
-            <p>
-              Nuestros guías expertos te acompañarán en estas emocionantes
-              aventuras, brindándote seguridad y experiencias inolvidables.
-            </p>
-          </header>
-          <div className="space-y-4">
-            {featuredSalidas.length > 0 ? (
-              <div className="mx-auto grid max-w-4xl grid-cols-[repeat(auto-fit,minmax(25ch,1fr))] grid-rows-3 gap-x-4 overflow-y-hidden [grid-auto-rows:0] sm:grid-rows-1">
-                {featuredSalidas.map((salida, i) => (
-                  <SalidaCard className="mb-4" key={i} {...salida} />
-                ))}
+            <section className="container max-w-prose space-y-8 py-8 md:max-w-6xl">
+              <header className="prose md:text-center">
+                <h2>Próximas salidas</h2>
+                <p>
+                  Nuestros guías expertos te acompañarán en estas emocionantes
+                  aventuras, brindándote seguridad y experiencias inolvidables.
+                </p>
+              </header>
+              <div className="space-y-4">
+                <SalidasGrid
+                  as="div"
+                  gridMode="fit"
+                  salidas={featuredSalidas}
+                  notInteractive
+                />
+                <div className="flex justify-center">
+                  <Button asChild size="lg" className="max-md:w-full">
+                    <Link href="/catalogo">Ver todas las salidas</Link>
+                  </Button>
+                </div>
               </div>
-            ) : (
-              <Card className="mx-auto max-w-md">
-                <CardHeader>
-                  <CardTitle>Ups!</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Actualmente no tenemos salidas planeadas, ¡asegurate de
-                    seguirnos en nuestras redes sociales para ser el primero en
-                    enterarte de nuestro próximo destino!
-                  </p>
-                </CardContent>
-              </Card>
-            )}
-            <div className="flex justify-center">
-              <Button asChild size="lg" className="max-md:w-full">
-                <Link href="/salidas">
-                  {featuredSalidas.length > 0
-                    ? "Ver todas las salidas"
-                    : "Ver salidas pasadas"}
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+            </section>
+          </>
+        )}
 
         <Separator />
 
