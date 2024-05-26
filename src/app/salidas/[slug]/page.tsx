@@ -91,7 +91,7 @@ export default function SalidaPage({ params }: Props) {
         <div className="space-y-8">
           {" "}
           <SalidaInfo />
-          <div className="prose rounded-lg border-8 border-dashed border-logo-yellow p-4">
+          <div className="prose rounded-sm border-4 border-primary p-6">
             <p>
               <strong>Atención:</strong> esta es una salidas turistica que
               realizamos en el pasado, y está en nuestra plataforma únicamente a
