@@ -32,7 +32,10 @@ export default function Hero() {
         </div>
       </div>
       <div className="prose relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-8 prose-a:no-underline md:pr-0 md:pt-16">
-        <h1 className="[text-wrap:balance]">{title}</h1>
+        <h1 className="[text-wrap:balance]">
+          Explorá la naturaleza argentina en una{" "}
+          <strong className="text-primary">aventura inolvidable</strong>
+        </h1>
         <p className="lead mt-0 md:w-3/4">
           Participá de inolvidables excursiones y conocé más de la cultura de
           este hermoso país.
