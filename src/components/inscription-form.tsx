@@ -80,7 +80,7 @@ export function InscriptionForm({ className, salidaTitle, ...props }: Props) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn("space-y-4", className)}
+        className={cn("space-y-8", className)}
         {...props}
       >
         <FormField
@@ -107,9 +107,6 @@ export function InscriptionForm({ className, salidaTitle, ...props }: Props) {
           render={({ field }) => (
             <FormItem>
               <FormLabel>N° de DNI</FormLabel>
-              <FormDescription>
-                Tu número de DNI sin puntos ni guiones
-              </FormDescription>
               <FormControl>
                 <Input
                   type="number"
@@ -118,6 +115,9 @@ export function InscriptionForm({ className, salidaTitle, ...props }: Props) {
                   {...field}
                 />
               </FormControl>
+              <FormDescription>
+                Tu número de DNI sin puntos ni guiones
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -129,9 +129,6 @@ export function InscriptionForm({ className, salidaTitle, ...props }: Props) {
           render={({ field }) => (
             <FormItem>
               <FormLabel>N° de CUIL</FormLabel>
-              <FormDescription>
-                Tu número de CUIL sin puntos ni guiones
-              </FormDescription>
               <FormControl>
                 <Input
                   type="number"
@@ -140,6 +137,9 @@ export function InscriptionForm({ className, salidaTitle, ...props }: Props) {
                   {...field}
                 />
               </FormControl>
+              <FormDescription>
+                Tu número de CUIL sin puntos ni guiones
+              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
