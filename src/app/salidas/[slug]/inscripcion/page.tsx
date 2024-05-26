@@ -12,7 +12,10 @@ export interface Props {
 }
 
 export function generateMetadata({ params }: Props) {
-  const { title, url } = findSalida(params.slug);
+  const { title: salidaTitle, url: salidaUrl } = findSalida(params.slug);
+
+  const title = `Inscripción: ${salidaTitle}`;
+  const url = `${salidaUrl}/inscripcion`;
 
   return {
     title,
@@ -30,6 +33,7 @@ export default function InscripcionPage({ params }: Props) {
     return (
       <main className="container mx-auto space-y-8 py-8">
         <section className="prose">
+          <p className="lead">{title}</p>
           <h1>Inscripción</h1>
           <p>
             Formulario de inscripción para realizar la actividad{" "}
