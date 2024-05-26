@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { CheckoutForm } from "@/components/checkout-form";
-import DifficultyBadge from "@/components/difficulty-badge";
-import Tag from "@/components/tag";
+import Tag, { DifficultyTag } from "@/components/tag";
 import { Button } from "@/components/ui/button";
 import { allSalidasSlugs, findSalida } from "@/lib/salidas";
 import { ARS, longDate } from "@/lib/utils";
@@ -36,7 +35,7 @@ export default function SalidaPage({ params }: Props) {
           <p className="lead mt-0">{longDate.format(new Date(date))}</p>
           <h1>{title}</h1>
           <div className="relative flex flex-wrap gap-2">
-            <DifficultyBadge difficulty={difficulty} />
+            <DifficultyTag difficulty={difficulty} />
             {tags.map((value, i) => (
               <Tag key={i} value={value} />
             ))}

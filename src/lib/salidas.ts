@@ -2,6 +2,8 @@ import { notFound, useSearchParams } from "next/navigation";
 
 import { Salida, allSalidas } from "contentlayer/generated";
 
+import difficulties from "./difficulties";
+
 export { allSalidas } from "contentlayer/generated";
 export type { Salida } from "contentlayer/generated";
 
@@ -35,17 +37,38 @@ export function useFilteredSalidas(salidasList: Salida[] = allSalidas) {
     // If `tagList` is false (there are no filters), show everything
     if (!tagList) return true;
 
-    let tagsAreInTagList = true;
-
     for (const tag of tagList) {
       if (tags.includes(tag)) continue;
 
       // This will only run if one of the tags in `tagList` isn't found in the current salida's tags
-      tagsAreInTagList = false;
-      break;
+      return false;
     }
 
-    return tagsAreInTagList;
+    return true;
+  };
+
+  const difficultyTagList =
+    params.has("dificultad") && params.getAll("dificultad");
+  const filterDifficultyTag = ({ difficulty }: Salida) => {
+    // If `tagList` is false (there are no filters), show everything
+    if (!difficultyTagList) return true;
+
+    const currentDifficulty = difficulties.find(
+      ({ value }) => value === difficulty,
+    );
+
+    if (!currentDifficulty) return true;
+
+    const currentDifficultyName = currentDifficulty.name;
+
+    for (const iDifficulty of difficultyTagList) {
+      if (currentDifficultyName === iDifficulty) return true;
+
+      // This will only run if one of the tags in `tagList` isn't found in the current salida's tags
+      return false;
+    }
+
+    return true;
   };
 
   const search = params.has("busqueda") && params.get("busqueda");
@@ -66,7 +89,10 @@ export function useFilteredSalidas(salidasList: Salida[] = allSalidas) {
     return normalizedTitle.includes(normalizedSearch);
   };
 
-  return salidasList.filter(filterTag).filter(filterSearch);
+  return salidasList
+    .filter(filterTag)
+    .filter(filterDifficultyTag)
+    .filter(filterSearch);
 }
 
 /**
@@ -81,6 +107,18 @@ export function useSalidasTags(salidasList: Salida[]) {
 
   // Transform set to array and sort alphabetically for easier mapping
   return Array.from(TagsSet).sort();
+}
+
+/**
+ * @description Returns a list of difficulties from the `salidasList` array, removing duplicates.
+ */
+export function useSalidasDifficulties(salidasList: Salida[]) {
+  const DifficultiesSet = new Set<string>();
+
+  salidasList.forEach(({ difficulty }) => DifficultiesSet.add(difficulty));
+
+  // Transform set to array for easier mapping
+  return Array.from(DifficultiesSet);
 }
 
 /**

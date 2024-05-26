@@ -16,8 +16,7 @@ import {
 } from "@/components/ui/card";
 import { ARS, longDate } from "@/lib/utils";
 
-import DifficultyBadge from "./difficulty-badge";
-import Tag from "./tag";
+import Tag, { DifficultyTag } from "./tag";
 
 export type Props = HTMLAttributes<HTMLDivElement> &
   Salida & { priority?: boolean };
@@ -50,7 +49,7 @@ const SalidaCard = forwardRef<HTMLDivElement, Props>(
 
       <CardHeader className="space-y-4">
         <div className="relative flex gap-2 overflow-hidden after:absolute after:right-0 after:h-full after:w-4 after:bg-gradient-to-l after:from-card">
-          <DifficultyBadge difficulty={difficulty} />
+          <DifficultyTag difficulty={difficulty} />
           {tags.map((value, i) => (
             <Tag key={i} value={value} />
           ))}
