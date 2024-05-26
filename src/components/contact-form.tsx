@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+import { formatPhoneNumber, getWhatsAppLink } from "@/lib/whatsapp";
+
 import { Button } from "./ui/button";
 import {
   Form,
@@ -24,23 +26,38 @@ const formSchema = z.object({
     })
     .min(1, "Por favor ingrese un nombre.")
     .trim(),
-  email: z
-    .string({ required_error: "Por favor ingrese un email." })
-    .email("Por favor ingrese un email válido.")
-    .trim(),
   message: z
     .string({ required_error: "Por favor ingrese su consulta." })
     .min(1, "Por favor ingrese un mensaje.")
     .trim(),
+  // honeypot field to avoid spam
+  favoriteColor: z.string().optional(),
 });
 
-export function ContactForm() {
+export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      message: "",
+      favoriteColor: "",
+    },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  function onSubmit({
+    name,
+    message,
+    favoriteColor,
+  }: z.infer<typeof formSchema>) {
+    // `favoriteColor` is a hidden field, if it has a value it means a bot filled it in
+    if (favoriteColor) return;
+
+    const link = getWhatsAppLink(
+      +process.env.NEXT_PUBLIC_PHONE,
+      message + "\n\n" + `- ${name}`,
+    );
+
+    window.open(link.toString(), "_blank");
   }
 
   return (
@@ -65,23 +82,6 @@ export function ContactForm() {
 
         <FormField
           control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input type="email" placeholder="juan@gmail.com" {...field} />
-              </FormControl>
-              <FormDescription>
-                Tu email, para que podamos responder tu mensaje.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
           name="message"
           render={({ field }) => (
             <FormItem>
@@ -97,7 +97,27 @@ export function ContactForm() {
           )}
         />
 
+        <FormField
+          control={form.control}
+          name="favoriteColor"
+          render={({ field }) => (
+            <FormItem className="sr-only">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
         <Button type="submit">Enviar</Button>
+
+        <p>
+          ¿Estás teniendo problemas con el formulario? Podés comunicarte de
+          forma directa con nosotros mediante WhatsApp:{" "}
+          <a href={getWhatsAppLink(+process.env.NEXT_PUBLIC_PHONE).toString()}>
+            {formatPhoneNumber(+process.env.NEXT_PUBLIC_PHONE, 2, 1, 2)}
+          </a>
+        </p>
       </form>
     </Form>
   );
