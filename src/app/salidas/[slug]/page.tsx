@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { CheckoutForm } from "@/components/checkout-form";
 import Tag, { DifficultyTag } from "@/components/tag";
 import { Button } from "@/components/ui/button";
 import { allSalidasSlugs, findSalida } from "@/lib/salidas";
@@ -24,9 +23,8 @@ export function generateMetadata({ params }: Props) {
 }
 
 export default function SalidaPage({ params }: Props) {
-  const { title, date, price, img, difficulty, tags, ...salida } = findSalida(
-    params.slug,
-  );
+  const { title, date, price, img, difficulty, tags, url, ...salida } =
+    findSalida(params.slug);
 
   function SalidaInfo() {
     return (
@@ -40,16 +38,16 @@ export default function SalidaPage({ params }: Props) {
               <Tag key={i} value={value} />
             ))}
           </div>
-          <div className="aspect-[4/3] w-full">
+          <div className="relative my-8 aspect-[4/3]">
             <Image
               src={img}
               alt={title}
               fill
-              className="!static rounded-md object-cover object-center"
+              className="m-0 rounded-md object-cover object-center"
             />
           </div>
           <Button className="w-full lg:hidden" asChild>
-            <Link href="#checkout">¡Realizá tu reserva!</Link>
+            <Link href="#inscripcion">¡Realizá tu reserva!</Link>
           </Button>
         </header>
         <main
@@ -69,7 +67,7 @@ export default function SalidaPage({ params }: Props) {
           </div>
           <div
             className="scroll-mt-24 space-y-8 lg:sticky lg:top-24 lg:max-w-sm"
-            id="checkout"
+            id="inscripcion"
           >
             <section className="mx-auto max-w-prose overflow-hidden rounded-sm text-center shadow">
               <p className="bg-logo-yellow p-4 text-xl font-bold">
@@ -77,13 +75,15 @@ export default function SalidaPage({ params }: Props) {
               </p>
               <p className="bg-secondary p-2">Precio por persona</p>
             </section>
-            <section className="prose rounded-sm bg-secondary p-4 shadow">
+            <section className="prose rounded-sm border-4 border-primary p-6">
               <h2 className="mt-0">Realizá tu reserva</h2>
               <p>
                 ¡Reserva tu lugar ahora para no perderte de esta extraordinaria
                 aventura!
               </p>
-              <CheckoutForm className="not-prose" salidaTitle={title} />
+              <Button className="not-prose w-full" asChild>
+                <Link href={`/${url}/inscripcion`}>¡Inscribite ya!</Link>
+              </Button>
             </section>
           </div>
         </div>
