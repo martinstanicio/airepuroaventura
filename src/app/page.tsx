@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import SalidaCard from "@/components/salida-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { featuredSalidas } from "@/lib/salidas";
 
 export default function Home() {
@@ -12,36 +13,39 @@ export default function Home() {
     <>
       <Hero />
       <main>
-        <div className="bg-secondary text-secondary-foreground">
-          <section className="container grid max-w-4xl gap-8 py-8 md:grid-cols-2">
-            <div className="relative h-full max-md:aspect-[4/3]">
-              <Image
-                src="/about-us.jpg"
-                alt="Todos los participantes de una salida de cicloturismo al llegar a destino"
-                fill
-                className="overflow-hidden rounded-md object-cover object-center shadow"
-              />
-            </div>
-            <div className="prose prose-a:no-underline">
-              <h2>Quiénes somos</h2>
-              <p>
-                Nosotros somos{" "}
-                <span className="font-bold text-primary">Aire Puro</span>, y
-                nuestra pasión es conectar a las personas con la belleza natural
-                y la aventura que ofrece <strong>Argentina</strong>.
-              </p>
-              <p>
-                Con nuestros <strong>guías experimentados</strong>, estamos
-                comprometidos a brindar a nuestros viajeros{" "}
-                <strong>aventuras inolvidables</strong>.
-              </p>
-              {/* <Button asChild className="max-md:w-full">
+        <Separator />
+
+        <section className="container grid max-w-4xl gap-8 py-16 md:grid-cols-2">
+          <div className="relative h-full max-md:aspect-[4/3]">
+            <Image
+              src="/about-us.jpg"
+              alt="Todos los participantes de una salida de cicloturismo al llegar a destino"
+              fill
+              className="overflow-hidden rounded-md object-cover object-center shadow"
+            />
+          </div>
+          <div className="prose prose-a:no-underline">
+            <h2>Quiénes somos</h2>
+            <p>
+              Nosotros somos{" "}
+              <span className="font-bold text-primary">Aire Puro</span>, y
+              nuestra pasión es conectar a las personas con la belleza natural y
+              la aventura que ofrece <strong>Argentina</strong>.
+            </p>
+            <p>
+              Con nuestros <strong>guías experimentados</strong>, estamos
+              comprometidos a brindar a nuestros viajeros{" "}
+              <strong>aventuras inolvidables</strong>.
+            </p>
+            {/* <Button asChild className="max-md:w-full">
                 <Link href="/sobre-nosotros">Sobre nosotros</Link>
               </Button> */}
-            </div>
-          </section>
-        </div>
-        <section className="container space-y-8 py-8">
+          </div>
+        </section>
+
+        <Separator />
+
+        <section className="container space-y-8 py-16">
           <header className="prose md:text-center">
             <h2>Próximas salidas</h2>
             <p>
@@ -81,21 +85,22 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="bg-primary">
-          <section className="container max-w-4xl space-y-4 py-8 md:text-center">
-            <div className="dark prose text-primary-foreground">
-              <h2>Contactanos</h2>
-              <p>
-                Ponte en contacto con nuestros guías expertos, quienes te
-                brindaran la información que necesites. Nos comprometemos a
-                responder lo antes posible.
-              </p>
-            </div>
-            <Button asChild variant="secondary" className="max-md:w-full">
-              <Link href="/contacto">Contacto</Link>
-            </Button>
-          </section>
-        </div>
+
+        <Separator />
+
+        <section className="container max-w-4xl space-y-4 py-16 md:text-center">
+          <div className="prose">
+            <h2>Contactanos</h2>
+            <p>
+              Ponte en contacto con nuestros guías expertos, quienes te
+              brindaran la información que necesites. Nos comprometemos a
+              responder lo antes posible.
+            </p>
+          </div>
+          <Button asChild className="max-md:w-full">
+            <Link href="/contacto">Contacto</Link>
+          </Button>
+        </section>
       </main>
     </>
   );
