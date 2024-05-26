@@ -60,7 +60,7 @@ export default function Home() {
                 />
                 <div className="flex justify-center">
                   <Button asChild size="lg" className="max-md:w-full">
-                    <Link href="/catalogo">Ver todas las salidas</Link>
+                    <Link href="/salidas">Ver todas las salidas</Link>
                   </Button>
                 </div>
               </div>
