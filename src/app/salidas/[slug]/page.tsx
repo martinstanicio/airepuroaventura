@@ -89,7 +89,6 @@ export default function SalidaPage({ params }: Props) {
         </div>
       ) : (
         <div className="space-y-8">
-          {" "}
           <SalidaInfo />
           <div className="prose rounded-sm border-4 border-primary p-6">
             <p>
