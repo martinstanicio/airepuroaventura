@@ -7,7 +7,6 @@ difficulty: medium
 tags:
   - montañismo
   - iniciación
-  - mendoza
 ---
 
 Caminaremos por el parque provincial **Cordón del Plata**, el mismo se encuentra ubicado en el departamento de Lujan de Cuyo y pertenece a la denominada cordillera frontal.

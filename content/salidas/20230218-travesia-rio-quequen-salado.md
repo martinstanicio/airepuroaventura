@@ -10,7 +10,6 @@ tags:
   - exploracion
   - tirolesa
   - rapel
-  - rio-quequen-salado
 ---
 
 Esta experiencia propone vivir un fin de semana diferente realizando deportes de aventura en pleno contacto con la naturaleza.

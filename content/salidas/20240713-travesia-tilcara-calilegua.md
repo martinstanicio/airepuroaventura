@@ -7,8 +7,6 @@ difficulty: hard
 tags:
   - travesia
   - trekking
-  - tilcara
-  - calilegua
 ---
 
 Algunos dicen que es el trekking más lindo del norte argentino. Sin dudas algo de eso hay...

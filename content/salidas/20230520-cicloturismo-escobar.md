@@ -6,8 +6,6 @@ img: /salidas/20230520-cicloturismo-escobar.jpg
 difficulty: medium
 tags:
   - cicloturismo
-  - mtb
-  - escobar
 ---
 
 Te invitamos a disfrutar de una jornada de cicloturismo por los puntos más atractivos de Escobar, capital nacional de la flor.

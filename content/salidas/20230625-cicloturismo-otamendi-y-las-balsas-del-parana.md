@@ -6,8 +6,6 @@ img: /salidas/20230625-cicloturismo-otamendi-y-las-balsas-del-parana.jpg
 difficulty: medium
 tags:
   - cicloturismo
-  - mtb
-  - otamendi
 ---
 
 Un día a puro pedal en pleno contacto con la naturaleza.

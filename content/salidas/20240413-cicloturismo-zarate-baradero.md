@@ -6,9 +6,6 @@ img: /salidas/20230422-cicloturismo-zarate-baradero.jpg
 difficulty: medium
 tags:
   - cicloturismo
-  - mtb
-  - zarate
-  - baradero
 ---
 
 Vení a disfrutar de dos días a puro pedal en un recorrido poco transitado y muy hermoso. Vamos a unir dos ciudades y atravesar dos pueblos que forman parte de la ecoregión Delta del Paraná

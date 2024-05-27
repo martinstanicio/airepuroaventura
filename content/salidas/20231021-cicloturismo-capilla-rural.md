@@ -6,8 +6,6 @@ img: /salidas/20231021-cicloturismo-capilla-rural.jpg
 difficulty: easy
 tags:
   - cicloturismo
-  - mtb
-  - capilla del señor
 ---
 
 Te invitamos a pedalear en un recorrido 100% de caminos rurales.

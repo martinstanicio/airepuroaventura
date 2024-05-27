@@ -7,8 +7,6 @@ difficulty: hard
 tags:
   - travesia
   - trekking
-  - tilcara
-  - calilegua
 ---
 
 Muchos lo consideran el trekking más lindo de nuestro país. Sin dudas algo de eso hay...
