@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef } from "react";
+import { HTMLAttributes } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -14,29 +14,32 @@ import {
   CardImage,
   CardTitle,
 } from "@/components/ui/card";
-import { ARS, longDate } from "@/lib/utils";
+import { isPastSalida } from "@/lib/salidas";
+import { ARS, cn, longDate } from "@/lib/utils";
 
 import Tag, { DifficultyTag } from "./tag";
 
 export type Props = HTMLAttributes<HTMLDivElement> &
   Salida & { priority?: boolean };
 
-const SalidaCard = forwardRef<HTMLDivElement, Props>(
-  (
-    {
-      title,
-      date,
-      price,
-      img,
-      difficulty,
-      tags,
-      url,
-      priority = false,
-      ...props
-    },
-    ref,
-  ) => (
-    <Card ref={ref} {...props}>
+export default function SalidaCard(props: Props) {
+  const isOld = isPastSalida(props);
+
+  const {
+    title,
+    date,
+    price,
+    img,
+    difficulty,
+    tags,
+    url,
+    priority = false,
+    className,
+    ..._props
+  } = props;
+
+  return (
+    <Card className={cn(isOld && "brightness-90", className)} {..._props}>
       <CardImage>
         <Image
           src={img}
@@ -54,9 +57,15 @@ const SalidaCard = forwardRef<HTMLDivElement, Props>(
             <Tag key={i} value={value} />
           ))}
         </div>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle>
+          <span className={cn(isOld && "line-through")}>{title}</span>
+        </CardTitle>
         <CardDescription>
-          <time dateTime={date}>{longDate.format(new Date(date))}</time>
+          {isOld ? (
+            "Salida realizada"
+          ) : (
+            <time dateTime={date}>{longDate.format(new Date(date))}</time>
+          )}
         </CardDescription>
       </CardHeader>
 
@@ -64,13 +73,8 @@ const SalidaCard = forwardRef<HTMLDivElement, Props>(
         <Button asChild>
           <Link href={url}>Ver salida</Link>
         </Button>
-        {new Date(date) > new Date() && (
-          <span className="font-bold">{ARS.format(price)}</span>
-        )}
+        {!isOld && <span className="font-bold">{ARS.format(price)}</span>}
       </CardFooter>
     </Card>
-  ),
-);
-SalidaCard.displayName = "SalidaCard";
-
-export default SalidaCard;
+  );
+}
