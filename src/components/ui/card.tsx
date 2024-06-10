@@ -23,7 +23,7 @@ const CardImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("relative aspect-[4/3]", className)}
+    className={cn("relative aspect-[4/3] bg-secondary", className)}
     {...props}
   />
 ));
