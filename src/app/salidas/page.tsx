@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 
-import SalidaCard from "@/components/salida-card";
 import SalidasGrid from "@/components/salidas-grid";
 import SearchControls from "@/components/search-controls";
-import { pastSalidas, sortedSalidas, upcomingSalidas } from "@/lib/salidas";
+import { sortedSalidas } from "@/lib/salidas";
 
 const title = "Salidas turísticas";
 const description =
