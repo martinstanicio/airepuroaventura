@@ -5,7 +5,6 @@ price: 67900
 img: /salidas/20231013-aventura-tres-picos-a-fondo.jpg
 difficulty: medium
 tags:
-  - aventura
   - trekking
   - vivac
 ---

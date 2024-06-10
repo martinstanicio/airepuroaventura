@@ -6,7 +6,6 @@ img: /salidas/20231208-trekking-pueblo-escondido.jpg
 difficulty: medium
 tags:
   - trekking
-  - exploración
 ---
 
 En el corazón de Córdoba, Argentina, se encuentra el enigmático **Pueblo Escondido**, un tesoro oculto listo para ser explorado. Rodeado por paisajes de montañas y valles, este destino encierra una rica historia que se remonta a décadas atrás. Las raíces del pueblo se entrelazan con relatos fascinantes que conservan la esencia de su historia en cada rincón. Durante la Segunda Guerra Mundial, este lugar desempeñó un papel crucial como centro de extracción de minerales, con sus socavones mineros siendo testigos silenciosos de esa época.

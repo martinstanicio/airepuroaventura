@@ -5,7 +5,6 @@ price: 565000
 img: /salidas/20240713-travesia-tilcara-calilegua.jpg
 difficulty: hard
 tags:
-  - travesia
   - trekking
 ---
 

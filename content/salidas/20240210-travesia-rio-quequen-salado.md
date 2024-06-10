@@ -5,9 +5,7 @@ price: 175000
 img: /salidas/20230218-travesia-rio-quequen-salado.jpg
 difficulty: medium
 tags:
-  - travesia
   - trekking
-  - exploracion
   - tirolesa
   - rapel
 ---

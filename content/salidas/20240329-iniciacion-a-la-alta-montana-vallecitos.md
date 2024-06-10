@@ -6,7 +6,6 @@ img: /salidas/20240329-iniciacion-a-la-alta-montana-vallecitos.jpg
 difficulty: medium
 tags:
   - montañismo
-  - iniciación
 ---
 
 Caminaremos por el parque provincial **Cordón del Plata**, el mismo se encuentra ubicado en el departamento de Lujan de Cuyo y pertenece a la denominada cordillera frontal.
