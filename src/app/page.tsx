@@ -43,7 +43,7 @@ export default function Home() {
           <>
             <Separator />
 
-            <section className="container max-w-prose space-y-8 py-8 md:max-w-6xl">
+            <section className="container max-w-4xl space-y-8 py-16 md:max-w-6xl">
               <header className="prose md:text-center">
                 <h2>Próximas salidas</h2>
                 <p>
