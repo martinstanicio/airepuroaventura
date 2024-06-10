@@ -75,7 +75,7 @@ export default function FilterBar() {
           </Button>
         )}
 
-        {salidaDifficulties.map((difficulty, i) => {
+        {/* {salidaDifficulties.map((difficulty, i) => {
           const currentDifficulty = difficulties.find(
             ({ value }) => value === difficulty,
           );
@@ -100,7 +100,7 @@ export default function FilterBar() {
               {name}
             </Button>
           );
-        })}
+        })} */}
 
         {salidaTags.map((tag, i) => (
           <Button
