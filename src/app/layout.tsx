@@ -1,8 +1,13 @@
+import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
 import "@/app/globals.css";
 import { cn } from "@/lib/utils";
+
+faConfig.autoAddCss = false;
 
 const fontSans = FontSans({
   subsets: ["latin"],
