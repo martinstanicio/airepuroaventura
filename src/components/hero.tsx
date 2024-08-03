@@ -31,7 +31,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="prose prose-a:no-underline relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-8 md:pr-0 md:pt-16">
+      <div className="prose prose-a:no-underline relative z-10 flex max-w-md flex-col place-self-center px-4 pb-16 pt-8 md:pr-0 md:pt-16">
         <h1 className="text-balance">
           Explorá la naturaleza argentina en una{" "}
           <strong className="text-primary">aventura inolvidable</strong>
