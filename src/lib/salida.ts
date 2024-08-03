@@ -1,4 +1,5 @@
 import { z } from "zod";
+import salidas from "~/salidas.json";
 
 const difficultySchema = z.union([
   z.literal("easy"),
@@ -43,3 +44,21 @@ export type EventDay = z.infer<typeof eventDaySchema>;
 export type Salida = z.infer<typeof salidaSchema>;
 export type SalidasList = z.infer<typeof salidasListSchema>;
 
+export function getAllSalidas(): SalidasList {
+  const allSalidas = salidas;
+  const result = salidasListSchema.safeParse(allSalidas);
+
+  if (!result.success) throw result.error;
+
+  return result.data as SalidasList;
+}
+
+export function getSalida(slug: string): Salida | null {
+  const allSalidas = getAllSalidas();
+
+  const result = allSalidas.find((salida) => salida.slug === slug);
+
+  if (!result) return null;
+
+  return result as Salida;
+}
