@@ -1,7 +1,6 @@
 import { config as faConfig } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
 import "@/app/globals.css";
@@ -16,11 +15,7 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-export const metadata: Metadata = {
-  title: "Aire Puro: Trekking y aventura",
-  description:
-    "Explora la belleza de Argentina con Aire Puro. Ofrecemos emocionantes salidas turísticas con trekking, cicloturismo, campamentos y más. ¡Únete a la aventura!",
-};
+export { metadata } from "@/lib/metadata";
 
 export default function RootLayout({
   children,
