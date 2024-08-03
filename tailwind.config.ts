@@ -81,9 +81,31 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      typography: (theme: (v: string) => void) => ({
+        DEFAULT: {
+          css: {
+            "--tw-prose-body": theme("colors.foreground"),
+            "--tw-prose-headings": theme("colors.foreground"),
+            "--tw-prose-lead": theme("colors.muted.foreground"),
+            "--tw-prose-links": theme("colors.primary.DEFAULT"),
+            "--tw-prose-bold": theme("colors.primary.DEFAULT"),
+            "--tw-prose-counters": theme("colors.primary.DEFAULT"),
+            "--tw-prose-bullets": theme("colors.primary.DEFAULT"),
+            "--tw-prose-hr": theme("colors.muted.foreground"),
+            "--tw-prose-quotes": theme("colors.primary.DEFAULT"),
+            "--tw-prose-quote-borders": theme("colors.primary.DEFAULT"),
+            "--tw-prose-captions": theme("colors.muted.foreground"),
+            "--tw-prose-code": theme("colors.foreground"),
+            "--tw-prose-pre-code": theme("colors.secondary.foreground"),
+            "--tw-prose-pre-bg": theme("colors.secondary.DEFAULT"),
+            "--tw-prose-th-borders": theme("colors.primary.DEFAULT"),
+            "--tw-prose-td-borders": theme("colors.border"),
+          },
+        },
+      }),
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;
