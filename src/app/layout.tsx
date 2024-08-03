@@ -6,9 +6,11 @@ import { Inter as FontSans } from "next/font/google";
 import "@/app/globals.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { envVariables } from "@/lib/env";
 import { cn } from "@/lib/utils";
 
 faConfig.autoAddCss = false;
+envVariables.parse(process.env);
 
 const fontSans = FontSans({
   subsets: ["latin"],
