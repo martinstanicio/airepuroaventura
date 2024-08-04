@@ -44,6 +44,37 @@ export type EventDay = z.infer<typeof eventDaySchema>;
 export type Salida = z.infer<typeof salidaSchema>;
 export type SalidasList = z.infer<typeof salidasListSchema>;
 
+export function getDifficultyData(difficulty: Difficulty): {
+  label: string;
+  background: string;
+  foreground: string;
+  hover: string;
+} {
+  switch (difficulty) {
+    case "easy":
+      return {
+        label: "fácil",
+        background: "bg-green-400",
+        foreground: "text-black",
+        hover: "hover:bg-green-400/80",
+      };
+    case "medium":
+      return {
+        label: "moderado",
+        background: "bg-amber-400",
+        foreground: "text-black",
+        hover: "hover:bg-amber-400/80",
+      };
+    case "hard":
+      return {
+        label: "difícil",
+        background: "bg-red-400",
+        foreground: "text-black",
+        hover: "hover:bg-red-400/80",
+      };
+  }
+}
+
 export function getAllSalidas(): SalidasList {
   const allSalidas = salidas;
   const result = salidasListSchema.safeParse(allSalidas);
