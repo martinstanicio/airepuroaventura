@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 import SearchBar from "@/components/search-bar";
-import TripCard from "@/components/trip-card";
-import { getAllTrips } from "@/lib/trips";
+
+import TripsGrid from "./trips-grid";
 
 const title = "Salidas turísticas";
 const description =
@@ -16,9 +16,7 @@ export const metadata: Metadata = {
   openGraph: { title, description, url },
 };
 
-export default function Trips() {
-  const allTrips = getAllTrips();
-
+export default function TripsPage() {
   return (
     <div className="container max-w-4xl space-y-8 py-8">
       <header className="prose max-w-full md:text-center">
@@ -26,10 +24,7 @@ export default function Trips() {
       </header>
       <main className="space-y-8">
         <SearchBar />
-
-        {allTrips.map((trip, i) => (
-          <TripCard key={i} {...trip} />
-        ))}
+        <TripsGrid />
       </main>
     </div>
   );
