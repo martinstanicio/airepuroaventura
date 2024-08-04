@@ -27,7 +27,7 @@ export default function TripHeader({ trip, className, ...props }: Props) {
           src={img}
           alt={title}
           fill
-          className="m-0 rounded-md object-cover object-center"
+          className="m-0 rounded-md bg-secondary object-cover object-center"
         />
       </div>
     </header>

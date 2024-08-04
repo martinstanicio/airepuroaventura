@@ -10,7 +10,8 @@ export default function AboutUs() {
           src={aboutUs}
           alt="Todos los participantes de una salida de cicloturismo al llegar a destino"
           fill
-          className="overflow-hidden rounded-md object-cover object-center shadow"
+          placeholder="blur"
+          className="overflow-hidden rounded-md bg-secondary object-cover object-center shadow"
         />
       </div>
       <div className="prose prose-a:no-underline">

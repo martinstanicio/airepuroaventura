@@ -26,7 +26,8 @@ export default function Hero() {
             alt="Todos los participantes de una salida de cicloturismo al llegar a destino"
             fill
             priority
-            className="object-cover object-center md:overflow-hidden md:rounded-md md:shadow-lg"
+            placeholder="blur"
+            className="bg-secondary object-cover object-center md:overflow-hidden md:rounded-md md:shadow-lg"
             sizes="(min-width: 1020px) 384px, (min-width: 780px) calc(11.82vw + 266px), 100vw"
           />
         </div>
