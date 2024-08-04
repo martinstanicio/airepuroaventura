@@ -1,4 +1,4 @@
-import { Difficulty, getDifficultyData } from "@/lib/salida";
+import { Difficulty, getDifficultyData } from "@/lib/trips";
 import { cn } from "@/lib/utils";
 
 import { Badge } from "./ui/badge";

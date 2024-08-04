@@ -1,5 +1,5 @@
 import { z } from "zod";
-import salidas from "~/salidas.json";
+import trips from "~/trips.json";
 
 const difficultySchema = z.union([
   z.literal("easy"),
@@ -12,7 +12,7 @@ const eventDaySchema = z.object({
   content: z.array(z.string()),
 });
 
-const salidaSchema = z.object({
+const tripSchema = z.object({
   slug: z.string(),
   title: z.string(),
   startDate: z.string().date(),
@@ -37,12 +37,12 @@ const salidaSchema = z.object({
   }),
 });
 
-const salidasListSchema = z.array(salidaSchema);
+const listOfTripsSchema = z.array(tripSchema);
 
 export type Difficulty = z.infer<typeof difficultySchema>;
 export type EventDay = z.infer<typeof eventDaySchema>;
-export type Salida = z.infer<typeof salidaSchema>;
-export type SalidasList = z.infer<typeof salidasListSchema>;
+export type Trip = z.infer<typeof tripSchema>;
+export type ListOfTrips = z.infer<typeof listOfTripsSchema>;
 
 export function getDifficultyData(difficulty: Difficulty): {
   label: string;
@@ -75,21 +75,21 @@ export function getDifficultyData(difficulty: Difficulty): {
   }
 }
 
-export function getAllSalidas(): SalidasList {
-  const allSalidas = salidas;
-  const result = salidasListSchema.safeParse(allSalidas);
+export function getAllTrips(): ListOfTrips {
+  const allTrips = trips;
+  const result = listOfTripsSchema.safeParse(allTrips);
 
   if (!result.success) throw result.error;
 
-  return result.data as SalidasList;
+  return result.data as ListOfTrips;
 }
 
-export function getSalida(slug: string): Salida | null {
-  const allSalidas = getAllSalidas();
+export function getTrip(slug: string): Trip | null {
+  const allTrips = getAllTrips();
 
-  const result = allSalidas.find((salida) => salida.slug === slug);
+  const result = allTrips.find((trip) => trip.slug === slug);
 
   if (!result) return null;
 
-  return result as Salida;
+  return result as Trip;
 }

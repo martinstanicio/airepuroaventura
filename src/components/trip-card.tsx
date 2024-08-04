@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Salida } from "@/lib/salida";
+import { Trip } from "@/lib/trips";
 import { ARS, longDate } from "@/lib/utils";
 
 import DifficultyBadge from "./difficulty-badge";
@@ -15,16 +15,15 @@ import {
   CardTitle,
 } from "./ui/card";
 
-export type Props = React.HTMLAttributes<HTMLDivElement> & Salida;
+export type Props = React.HTMLAttributes<HTMLDivElement> & Trip;
 
-export default function SalidaCard({
+export default function TripCard({
   slug,
   img,
   difficulty,
   tags,
   title,
   startDate,
-  description,
   price,
 }: Props) {
   const link = `/salidas/${slug}`;
