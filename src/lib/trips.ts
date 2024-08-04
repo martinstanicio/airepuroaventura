@@ -81,7 +81,34 @@ export function getAllTrips(): ListOfTrips {
 
   if (!result.success) throw result.error;
 
-  return result.data as ListOfTrips;
+  return result.data;
+}
+
+export function getFilteredTrips(query: string): ListOfTrips {
+  const allTrips = getAllTrips();
+
+  function filterFunction({ title, tags }: { title: string; tags: string[] }) {
+    const lowercaseQuery = query.toLowerCase();
+    const lowercaseTitle = title.toLowerCase();
+    let queryIsInTags = false;
+
+    tags.every((tag) => {
+      const lowercaseTag = tag.toLowerCase();
+
+      if (lowercaseTag.includes(lowercaseQuery)) {
+        queryIsInTags = true;
+        return false;
+      }
+
+      return true;
+    });
+
+    return lowercaseTitle.includes(lowercaseQuery) || queryIsInTags;
+  }
+
+  const result = allTrips.filter(filterFunction);
+
+  return result;
 }
 
 export function getTrip(slug: string): Trip | null {
@@ -91,5 +118,5 @@ export function getTrip(slug: string): Trip | null {
 
   if (!result) return null;
 
-  return result as Trip;
+  return result;
 }
