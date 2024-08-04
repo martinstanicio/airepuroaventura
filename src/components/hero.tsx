@@ -15,7 +15,7 @@ export default function Hero() {
         >
           <path
             d="M99 3C99 3 82.5 3 80 13.5C75.9676 26.4784 86.5 41.5 70.5 54C55.7753 65.5037 41.5 38 20.5 49C11.9123 53.4983 10 63 10 63"
-            className="stroke-logo-yellow fill-none stroke-2"
+            className="fill-none stroke-amber-400 stroke-2"
             strokeDasharray="5"
             strokeLinecap="round"
           />
@@ -31,7 +31,7 @@ export default function Hero() {
           />
         </div>
       </div>
-      <div className="prose prose-a:no-underline relative z-10 flex max-w-md flex-col place-self-center px-4 pb-16 pt-8 md:pr-0 md:pt-16">
+      <div className="prose relative z-10 flex max-w-md flex-col place-self-center px-4 pb-16 pt-8 prose-a:no-underline md:pr-0 md:pt-16">
         <h1 className="text-balance">
           Explorá la naturaleza argentina en una{" "}
           <strong className="text-primary">aventura inolvidable</strong>
