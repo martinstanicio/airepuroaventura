@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import SearchBar from "@/components/search-bar";
 import TripCard from "@/components/trip-card";
 import { getAllTrips } from "@/lib/trips";
 
@@ -24,6 +25,8 @@ export default function Trips() {
         <h1>{title}</h1>
       </header>
       <main className="space-y-8">
+        <SearchBar />
+
         {allTrips.map((trip, i) => (
           <TripCard key={i} {...trip} />
         ))}
