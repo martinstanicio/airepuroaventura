@@ -5,15 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Label } from "@radix-ui/react-label";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { Input } from "./ui/input";
 
 export default function SearchBar() {
+  const [search, setSearch] = useState("");
+
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const { replace, push } = useRouter();
 
-  function handleSearch(search: string) {
+  useEffect(() => {
     const newParams = new URLSearchParams(searchParams);
 
     // update the search param if it exists and has content, otherwise remove it
@@ -27,7 +30,7 @@ export default function SearchBar() {
     } else {
       replace(`/salidas/?${newParams.toString()}`);
     }
-  }
+  });
 
   return (
     <div className="relative flex items-center gap-4 text-foreground">
@@ -42,8 +45,8 @@ export default function SearchBar() {
         type="search"
         id="search"
         placeholder="Trekking..."
-        value={searchParams.get("busqueda")?.toString()}
-        onChange={(e) => handleSearch(e.target.value)}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
         className="pl-10"
       />
     </div>
