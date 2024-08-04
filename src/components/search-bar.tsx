@@ -48,6 +48,7 @@ export default function SearchBar() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="pl-10"
+        autoFocus
       />
     </div>
   );
