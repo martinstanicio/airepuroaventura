@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import TripCard from "@/components/trip-card";
 import { Trip, getAllTrips, getFilteredTrips } from "@/lib/trips";
 
-export type Props = { listOfTrips: Trip[] };
+export type Props = { listOfTrips?: Trip[] };
 
 export default function TripsGrid({ listOfTrips = getAllTrips() }: Props) {
   const searchParams = useSearchParams();
