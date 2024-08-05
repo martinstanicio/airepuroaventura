@@ -37,12 +37,9 @@ const tripSchema = z.object({
   }),
 });
 
-const listOfTripsSchema = z.array(tripSchema);
-
 export type Difficulty = z.infer<typeof difficultySchema>;
 export type EventDay = z.infer<typeof eventDaySchema>;
 export type Trip = z.infer<typeof tripSchema>;
-export type ListOfTrips = z.infer<typeof listOfTripsSchema>;
 
 export function getDifficultyData(difficulty: Difficulty): {
   label: string;
@@ -75,16 +72,16 @@ export function getDifficultyData(difficulty: Difficulty): {
   }
 }
 
-export function getAllTrips(): ListOfTrips {
+export function getAllTrips(): Trip[] {
   const allTrips = trips;
-  const result = listOfTripsSchema.safeParse(allTrips);
+  const result = z.array(tripSchema).safeParse(allTrips);
 
   if (!result.success) throw result.error;
 
   return result.data;
 }
 
-export function getFilteredTrips(query: string): ListOfTrips {
+export function getFilteredTrips(query: string): Trip[] {
   const allTrips = getAllTrips();
 
   function filterFunction({ title, tags }: { title: string; tags: string[] }) {
