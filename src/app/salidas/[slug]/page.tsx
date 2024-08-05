@@ -42,7 +42,7 @@ export default function TripPage({ params }: Props) {
 
   return (
     <article className="container py-8 lg:flex lg:items-start lg:justify-center lg:gap-8">
-      <div className="max-w-prose space-y-8 max-lg:mx-auto">
+      <div className="w-full max-w-prose space-y-8 max-lg:mx-auto">
         <TripHeader trip={trip} />
         <PriceBox className="lg:hidden" price={trip.price} />
         <BookingBox className="lg:hidden" trip={trip} />
