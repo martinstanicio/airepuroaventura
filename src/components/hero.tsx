@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import hero from "@/assets/hero.jpg";
+
 import { Button } from "./ui/button";
 
 export default function Hero() {
@@ -13,24 +15,25 @@ export default function Hero() {
         >
           <path
             d="M99 3C99 3 82.5 3 80 13.5C75.9676 26.4784 86.5 41.5 70.5 54C55.7753 65.5037 41.5 38 20.5 49C11.9123 53.4983 10 63 10 63"
-            className="fill-none stroke-logo-yellow stroke-2"
+            className="fill-none stroke-amber-400 stroke-2"
             strokeDasharray="5"
             strokeLinecap="round"
           />
         </svg>
         <div className="relative aspect-[4/3] w-full max-md:max-h-64 md:max-w-[24rem]">
           <Image
-            src="/hero.jpg"
+            src={hero}
             alt="Todos los participantes de una salida de cicloturismo al llegar a destino"
             fill
             priority
-            className="object-cover object-center md:overflow-hidden md:rounded-md md:shadow-lg"
+            placeholder="blur"
+            className="bg-secondary object-cover object-center md:overflow-hidden md:rounded-md md:shadow-lg"
             sizes="(min-width: 1020px) 384px, (min-width: 780px) calc(11.82vw + 266px), 100vw"
           />
         </div>
       </div>
-      <div className="prose relative z-10 flex max-w-md flex-col justify-center px-4 pb-16 pt-8 prose-a:no-underline md:pr-0 md:pt-16">
-        <h1 className="[text-wrap:balance]">
+      <div className="prose relative z-10 flex max-w-md flex-col place-self-center px-4 pb-16 pt-8 prose-a:no-underline md:pr-0 md:pt-16">
+        <h1 className="text-balance">
           Explorá la naturaleza argentina en una{" "}
           <strong className="text-primary">aventura inolvidable</strong>
         </h1>

@@ -1,13 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+
+const config = {
   darkMode: ["class"],
-  content: ["./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
   theme: {
     container: {
       center: true,
       padding: {
         DEFAULT: "1rem",
         sm: "2rem",
+      },
+      screens: {
+        "2xl": "1400px",
       },
     },
     extend: {
@@ -17,7 +28,6 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        headings: "hsl(var(--headings))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -29,18 +39,6 @@ module.exports = {
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
-        },
-        easy: {
-          DEFAULT: "hsl(var(--easy))",
-          foreground: "hsl(var(--easy-foreground))",
-        },
-        medium: {
-          DEFAULT: "hsl(var(--medium))",
-          foreground: "hsl(var(--medium-foreground))",
-        },
-        hard: {
-          DEFAULT: "hsl(var(--hard))",
-          foreground: "hsl(var(--hard-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -58,11 +56,6 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        logo: {
-          yellow: "#f4a40c",
-          "dark-blue": "#2f4e5c",
-          "light-blue": "#34abbc",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,23 +64,26 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+      },
       typography: (theme: (v: string) => void) => ({
         DEFAULT: {
           css: {
             "--tw-prose-body": theme("colors.foreground"),
-            "--tw-prose-headings": theme("colors.headings"),
+            "--tw-prose-headings": theme("colors.foreground"),
             "--tw-prose-lead": theme("colors.muted.foreground"),
             "--tw-prose-links": theme("colors.primary.DEFAULT"),
             "--tw-prose-bold": theme("colors.primary.DEFAULT"),
@@ -97,7 +93,7 @@ module.exports = {
             "--tw-prose-quotes": theme("colors.primary.DEFAULT"),
             "--tw-prose-quote-borders": theme("colors.primary.DEFAULT"),
             "--tw-prose-captions": theme("colors.muted.foreground"),
-            "--tw-prose-code": theme("colors.headings"),
+            "--tw-prose-code": theme("colors.foreground"),
             "--tw-prose-pre-code": theme("colors.secondary.foreground"),
             "--tw-prose-pre-bg": theme("colors.secondary.DEFAULT"),
             "--tw-prose-th-borders": theme("colors.primary.DEFAULT"),
@@ -108,4 +104,6 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-};
+} satisfies Config;
+
+export default config;

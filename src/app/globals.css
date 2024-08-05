@@ -6,14 +6,13 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    --headings: 188 57% 15%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: 210 40% 97.5%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -21,22 +20,20 @@
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --easy: 141.9 69.2% 58%;
-    --easy-foreground: var(--foreground);
-    --medium: 43.3 96.4% 56.3%;
-    --medium-foreground: var(--foreground);
-    --hard: 0 91% 71%;
-    --hard-foreground: var(--foreground);
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
-    --radius: 1rem;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --headings: 188 57% 95%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
@@ -51,15 +48,14 @@
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --easy: 142.4 71.8% 29.2%;
-    --easy-foreground: var(--foreground);
-    --medium: 26 90.5% 37.1%;
-    --medium-foreground: var(--foreground);
-    --hard: 0 73.7% 41.8%;
-    --hard-foreground: var(--foreground);
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
@@ -67,16 +63,7 @@
   * {
     @apply border-border;
   }
-
-  html {
-    @apply scroll-smooth;
-  }
-
   body {
     @apply bg-background text-foreground;
-  }
-
-  .prose {
-    @apply mx-auto marker:prose-li:!font-bold;
   }
 }

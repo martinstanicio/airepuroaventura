@@ -1,8 +1,11 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 
-import SalidasGrid from "@/components/salidas-grid";
-import SearchControls from "@/components/search-controls";
-import { sortedSalidas } from "@/lib/salidas";
+import SearchBar from "@/components/search-bar";
+import { Separator } from "@/components/ui/separator";
+import { getPastTrips, getUpcomingTrips } from "@/lib/trips";
+
+import TripsGrid from "./trips-grid";
 
 const title = "Salidas turísticas";
 const description =
@@ -16,20 +19,42 @@ export const metadata: Metadata = {
   openGraph: { title, description, url },
 };
 
-export default function Salidas() {
+export default function TripsPage() {
   return (
-    <div className="container min-h-screen max-w-prose space-y-8 py-8 md:max-w-6xl">
-      <header className="prose md:text-center">
+    <div className="container max-w-4xl space-y-8 py-8">
+      <header className="prose max-w-full md:text-center">
         <h1>{title}</h1>
       </header>
-      <div className="space-y-8">
-        <SearchControls className="top-32 self-start" />
-        <SalidasGrid
-          as="main"
-          salidas={sortedSalidas}
-          className="xl:order-first xl:col-span-3"
-        />
-      </div>
+      <main className="space-y-8">
+        <Suspense>
+          <SearchBar />
+        </Suspense>
+
+        <div className="prose max-w-full">
+          <h2>Próximas salidas</h2>
+          <div className="not-prose space-y-4">
+            <Suspense>
+              <TripsGrid listOfTrips={getUpcomingTrips()} />
+            </Suspense>
+          </div>
+        </div>
+
+        <Separator />
+
+        <div className="prose max-w-full">
+          <h2>Salidas pasadas</h2>
+          <p>
+            Estas son salidas turísticas que <b>realizamos en el pasado</b>,
+            están en nuestra plataforma únicamente a <b>modo informativo</b>{" "}
+            para aquellos que quieran ver qué actividades solemos realizar.
+          </p>
+          <div className="not-prose space-y-4">
+            <Suspense>
+              <TripsGrid listOfTrips={getPastTrips()} />
+            </Suspense>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }

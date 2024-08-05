@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title,
     description,
     type: "website",
-    locale: "es",
+    locale: "es-AR",
     url: "/",
   },
 };
