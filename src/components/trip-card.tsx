@@ -48,7 +48,7 @@ export default function TripCard({
             </li>
           ))}
         </ul>
-        <CardTitle className="text-xl sm:text-3xl md:text-2xl lg:text-3xl">
+        <CardTitle className="text-xl sm:text-3xl md:text-2xl">
           <Link href={link}>{title}</Link>
         </CardTitle>
         <CardDescription className="lg:text-base">
