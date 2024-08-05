@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 import SearchBar from "@/components/search-bar";
 import { Separator } from "@/components/ui/separator";
@@ -25,12 +26,16 @@ export default function TripsPage() {
         <h1>{title}</h1>
       </header>
       <main className="space-y-8">
-        <SearchBar />
+        <Suspense>
+          <SearchBar />
+        </Suspense>
 
         <div className="prose max-w-full">
           <h2>Próximas salidas</h2>
           <div className="not-prose space-y-4">
-            <TripsGrid listOfTrips={getUpcomingTrips()} />
+            <Suspense>
+              <TripsGrid listOfTrips={getUpcomingTrips()} />
+            </Suspense>
           </div>
         </div>
 
@@ -44,7 +49,9 @@ export default function TripsPage() {
             para aquellos que quieran ver qué actividades solemos realizar.
           </p>
           <div className="not-prose space-y-4">
-            <TripsGrid listOfTrips={getPastTrips()} />
+            <Suspense>
+              <TripsGrid listOfTrips={getPastTrips()} />
+            </Suspense>
           </div>
         </div>
       </main>
