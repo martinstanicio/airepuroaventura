@@ -15,7 +15,7 @@ export default function PastTripBox({ className, ...props }: Props) {
       {...props}
     >
       <p className="bg-destructive p-4 text-center text-xl font-bold text-destructive-foreground">
-        Realizá tu reserva
+        ¡Salida ya realizada!
       </p>
       <div className="prose max-w-full bg-secondary p-4 text-secondary-foreground">
         <p>
