@@ -1,3 +1,5 @@
+import { micromark } from "micromark";
+
 import { Trip } from "@/lib/trips";
 
 export default function TripPersonalEquipment({ personalEquipment }: Trip) {
@@ -11,7 +13,13 @@ export default function TripPersonalEquipment({ personalEquipment }: Trip) {
         ))}
       </ul>
 
-      {personalEquipment.footer && <p>{personalEquipment.footer}</p>}
+      {personalEquipment.footer && (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: micromark(personalEquipment.footer),
+          }}
+        />
+      )}
     </section>
   );
 }

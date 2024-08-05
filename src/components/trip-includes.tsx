@@ -1,3 +1,5 @@
+import { micromark } from "micromark";
+
 import { Separator } from "@/components/ui/separator";
 import { Trip } from "@/lib/trips";
 
@@ -12,7 +14,9 @@ export default function TripIncludes({ includes, notIncludes }: Trip) {
         ))}
       </ul>
 
-      {includes.footer && <p>{includes.footer}</p>}
+      {includes.footer && (
+        <div dangerouslySetInnerHTML={{ __html: micromark(includes.footer) }} />
+      )}
 
       <Separator />
 
@@ -24,7 +28,11 @@ export default function TripIncludes({ includes, notIncludes }: Trip) {
         ))}
       </ul>
 
-      {notIncludes.footer && <p>{notIncludes.footer}</p>}
+      {notIncludes.footer && (
+        <div
+          dangerouslySetInnerHTML={{ __html: micromark(notIncludes.footer) }}
+        />
+      )}
     </section>
   );
 }
