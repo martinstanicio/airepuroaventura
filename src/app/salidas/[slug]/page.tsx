@@ -45,6 +45,11 @@ export default function TripPage({ params }: Props) {
     <article className="container py-8 lg:flex lg:items-start lg:justify-center lg:gap-8">
       <div className="w-full max-w-prose space-y-8 max-lg:mx-auto">
         <TripHeader trip={trip} />
+        {isUpcomingTrip(trip) && (
+          <PriceBox className="lg:hidden" price={trip.price} />
+        )}
+        <ContactBox trip={trip} />
+        <TripAccordion trip={trip} />
         {isUpcomingTrip(trip) ? (
           <>
             <PriceBox className="lg:hidden" price={trip.price} />
@@ -53,8 +58,6 @@ export default function TripPage({ params }: Props) {
         ) : (
           <PastTripBox className="lg:hidden" />
         )}
-        <TripAccordion trip={trip} />
-        <ContactBox trip={trip} />
       </div>
       <div className="max-w-sm space-y-8 max-lg:hidden lg:sticky lg:top-24">
         {isUpcomingTrip(trip) ? (
