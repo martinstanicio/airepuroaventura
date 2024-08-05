@@ -118,3 +118,23 @@ export function getTrip(slug: string): Trip | null {
 
   return result;
 }
+
+export function isUpcomingTrip(trip: Trip) {
+  return new Date(trip.startDate) >= new Date();
+}
+
+export function isPastTrip(trip: Trip) {
+  return new Date(trip.startDate) < new Date();
+}
+
+export function getUpcomingTrips(): Trip[] {
+  const allTrips = getAllTrips();
+
+  return allTrips.filter(isUpcomingTrip);
+}
+
+export function getPastTrips(): Trip[] {
+  const allTrips = getAllTrips();
+
+  return allTrips.filter(isPastTrip);
+}
