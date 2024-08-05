@@ -2,10 +2,11 @@ import { notFound } from "next/navigation";
 
 import BookingBox from "@/components/booking-box";
 import ContactBox from "@/components/contact-box";
+import PastTripBox from "@/components/past-trip-box";
 import PriceBox from "@/components/price-box";
 import TripAccordion from "@/components/trip-accordion";
 import TripHeader from "@/components/trip-header";
-import { getAllTrips, getTrip } from "@/lib/trips";
+import { getAllTrips, getTrip, isUpcomingTrip } from "@/lib/trips";
 
 export function generateStaticParams() {
   const allTrips = getAllTrips();
@@ -44,14 +45,26 @@ export default function TripPage({ params }: Props) {
     <article className="container py-8 lg:flex lg:items-start lg:justify-center lg:gap-8">
       <div className="w-full max-w-prose space-y-8 max-lg:mx-auto">
         <TripHeader trip={trip} />
-        <PriceBox className="lg:hidden" price={trip.price} />
-        <BookingBox className="lg:hidden" trip={trip} />
+        {isUpcomingTrip(trip) ? (
+          <>
+            <PriceBox className="lg:hidden" price={trip.price} />
+            <BookingBox className="lg:hidden" trip={trip} />
+          </>
+        ) : (
+          <PastTripBox className="lg:hidden" />
+        )}
         <TripAccordion trip={trip} />
         <ContactBox trip={trip} />
       </div>
       <div className="max-w-sm space-y-8 max-lg:hidden lg:sticky lg:top-24">
-        <PriceBox price={trip.price} />
-        <BookingBox trip={trip} />
+        {isUpcomingTrip(trip) ? (
+          <>
+            <PriceBox price={trip.price} />
+            <BookingBox trip={trip} />
+          </>
+        ) : (
+          <PastTripBox />
+        )}
       </div>
     </article>
   );

@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
 import SearchBar from "@/components/search-bar";
+import { Separator } from "@/components/ui/separator";
+import { getPastTrips, getUpcomingTrips } from "@/lib/trips";
 
 import TripsGrid from "./trips-grid";
 
@@ -24,7 +26,27 @@ export default function TripsPage() {
       </header>
       <main className="space-y-8">
         <SearchBar />
-        <TripsGrid />
+
+        <div className="prose max-w-full">
+          <h2>Próximas salidas</h2>
+          <div className="not-prose space-y-4">
+            <TripsGrid listOfTrips={getUpcomingTrips()} />
+          </div>
+        </div>
+
+        <Separator />
+
+        <div className="prose max-w-full">
+          <h2>Salidas pasadas</h2>
+          <p>
+            Estas son salidas turísticas que <b>realizamos en el pasado</b>,
+            están en nuestra plataforma únicamente a <b>modo informativo</b>{" "}
+            para aquellos que quieran ver qué actividades solemos realizar.
+          </p>
+          <div className="not-prose space-y-4">
+            <TripsGrid listOfTrips={getPastTrips()} />
+          </div>
+        </div>
       </main>
     </div>
   );
