@@ -7,21 +7,13 @@ export default function TripItinerary({ itinerary }: Trip) {
     <section className="prose">
       <h2>Itinerario</h2>
 
-      {itinerary.map(({ title, content }, i) => {
-        const contentHtml = content.reduce((accumulator, paragraph) => {
-          const parsed = micromark(paragraph);
-          accumulator += parsed;
-          return accumulator;
-        }, "");
+      {itinerary.map(({ title, content }, i) => (
+        <div key={i}>
+          <h3>{title}</h3>
 
-        return (
-          <div key={i}>
-            <h3>{title}</h3>
-
-            <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-          </div>
-        );
-      })}
+          <div dangerouslySetInnerHTML={{ __html: micromark(content) }} />
+        </div>
+      ))}
     </section>
   );
 }

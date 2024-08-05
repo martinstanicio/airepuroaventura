@@ -9,7 +9,7 @@ const difficultySchema = z.union([
 
 const eventDaySchema = z.object({
   title: z.string(),
-  content: z.array(z.string()),
+  content: z.string(),
 });
 
 const tripSchema = z.object({
@@ -21,20 +21,10 @@ const tripSchema = z.object({
   img: z.string(),
   difficulty: difficultySchema,
   tags: z.array(z.string()),
-  description: z.array(z.string()),
+  description: z.string(),
   itinerary: z.array(eventDaySchema),
-  personalEquipment: z.object({
-    items: z.array(z.string()),
-    footer: z.string().optional(),
-  }),
-  includes: z.object({
-    items: z.array(z.string()),
-    footer: z.string().optional(),
-  }),
-  notIncludes: z.object({
-    items: z.array(z.string()),
-    footer: z.string().optional(),
-  }),
+  personalEquipment: z.string(),
+  includes: z.string(),
 });
 
 export type Difficulty = z.infer<typeof difficultySchema>;
