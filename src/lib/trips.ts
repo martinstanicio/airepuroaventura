@@ -81,9 +81,10 @@ export function getAllTrips(): Trip[] {
   return result.data;
 }
 
-export function getFilteredTrips(query: string): Trip[] {
-  const allTrips = getAllTrips();
-
+export function getFilteredTrips(
+  query: string,
+  listOfTrips: Trip[] = getAllTrips(),
+): Trip[] {
   function filterFunction({ title, tags }: { title: string; tags: string[] }) {
     const lowercaseQuery = query.toLowerCase();
     const lowercaseTitle = title.toLowerCase();
@@ -103,7 +104,7 @@ export function getFilteredTrips(query: string): Trip[] {
     return lowercaseTitle.includes(lowercaseQuery) || queryIsInTags;
   }
 
-  const result = allTrips.filter(filterFunction);
+  const result = listOfTrips.filter(filterFunction);
 
   return result;
 }

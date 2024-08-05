@@ -3,12 +3,14 @@
 import { useSearchParams } from "next/navigation";
 
 import TripCard from "@/components/trip-card";
-import { getFilteredTrips } from "@/lib/trips";
+import { Trip, getAllTrips, getFilteredTrips } from "@/lib/trips";
 
-export default function TripsGrid() {
+export type Props = { listOfTrips: Trip[] };
+
+export default function TripsGrid({ listOfTrips = getAllTrips() }: Props) {
   const searchParams = useSearchParams();
   const query = searchParams.get("busqueda") || "";
-  const allTrips = getFilteredTrips(query);
+  const filteredTrips = getFilteredTrips(query, listOfTrips);
 
-  return allTrips.map((trip, i) => <TripCard key={i} {...trip} />);
+  return filteredTrips.map((trip, i) => <TripCard key={i} {...trip} />);
 }
