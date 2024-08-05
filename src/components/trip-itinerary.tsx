@@ -4,7 +4,7 @@ import { Trip } from "@/lib/trips";
 
 export default function TripItinerary({ itinerary }: Trip) {
   return (
-    <section className="prose">
+    <section className="prose prose-em:text-primary">
       <h2>Itinerario</h2>
 
       {itinerary.map(({ title, content }, i) => (
