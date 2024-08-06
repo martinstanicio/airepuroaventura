@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import BookingBox from "@/components/booking-box";
@@ -21,18 +22,25 @@ export interface Props {
   params: ReturnType<typeof generateStaticParams>[number];
 }
 
-export function generateMetadata({ params }: Props) {
+export function generateMetadata({ params }: Props): Metadata {
   const trip = getTrip(params.slug);
 
   if (!trip) notFound();
 
-  const { title, slug } = trip;
+  const { title, description, slug, img } = trip;
+  const metaDescription = description.split("\n")[0];
   const url = `/salidas/${slug}`;
 
   return {
     title,
+    description: metaDescription,
     alternates: { canonical: url },
-    openGraph: { title, url },
+    openGraph: {
+      title,
+      description: metaDescription,
+      url,
+      images: img,
+    },
   };
 }
 
