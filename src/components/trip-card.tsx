@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Trip } from "@/lib/trips";
+import { Trip, isUpcomingTrip } from "@/lib/trips";
 import { ARS, longDate } from "@/lib/utils";
 
 import DifficultyBadge from "./difficulty-badge";
@@ -17,15 +17,8 @@ import {
 
 export type Props = React.HTMLAttributes<HTMLDivElement> & Trip;
 
-export default function TripCard({
-  slug,
-  img,
-  difficulty,
-  tags,
-  title,
-  startDate,
-  price,
-}: Props) {
+export default function TripCard(trip: Props) {
+  const { slug, img, difficulty, tags, title, startDate, price } = trip;
   const link = `/salidas/${slug}`;
 
   return (
@@ -58,12 +51,18 @@ export default function TripCard({
 
       <CardFooter className="col-span-3 flex flex-wrap justify-between gap-4 border-t-2 pt-6 md:flex-col md:border-l-2 md:border-t-0">
         <div className="flex-1 content-center">
-          <Link
-            href={link}
-            className="text-xl font-bold sm:text-2xl lg:text-3xl"
-          >
-            {ARS.format(price)}
-          </Link>
+          {isUpcomingTrip(trip) ? (
+            <Link
+              href={link}
+              className="text-xl font-bold sm:text-2xl lg:text-3xl"
+            >
+              {ARS.format(price)}
+            </Link>
+          ) : (
+            <p>
+              <strong>Salida ya realizada</strong>
+            </p>
+          )}
         </div>
         <Button className="max-md:flex-1 md:w-full" asChild>
           <Link href={link}>Ver más</Link>
