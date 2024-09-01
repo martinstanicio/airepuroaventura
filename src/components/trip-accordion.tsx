@@ -30,17 +30,23 @@ export default function TripAccordion({ trip }: { trip: Trip }) {
       label: "¿Qué actividades vamos a realizar?",
       content: <TripItinerary {...trip} />,
     },
-    {
+  ];
+
+  if (trip.personalEquipment) {
+    content.push({
       id: "personal-equipment",
       label: "¿Qué tengo que llevar?",
       content: <TripPersonalEquipment {...trip} />,
-    },
-    {
+    });
+  }
+
+  if (trip.includes) {
+    content.push({
       id: "includes",
       label: "¿Qué está incluido en el viaje?",
       content: <TripIncludes {...trip} />,
-    },
-  ];
+    });
+  }
 
   return (
     <Accordion
