@@ -1,5 +1,32 @@
 [
   {
+    "slug": "20241011-ascenso-al-cerro-champaqui",
+    "title": "Ascenso al Cerro Champaquí",
+    "startDate": "2024-10-11",
+    "endDate": "2024-10-13",
+    "price": 239000,
+    "img": "/salidas/20241011-ascenso-al-cerro-champaqui.jpg",
+    "difficulty": "medium",
+    "tags": ["montañismo"],
+    "description": "## Opcional 1\n\nUna noche (jueves 10/10) y cena en Villa Alpina.\n\n**$ 25.000**\n\n## Opcional 2\n\nTransfer Buenos Aires - Villa Alpina.\n\n**$ 95.000** por persona en base 8 personas.\n",
+    "itinerary": [
+      {
+        "title": "Día 1 - Viernes 11/10",
+        "content": "El trekking inicia en la localidad de **Villa Alpina**, al pie de las **Sierras Grandes**, se atraviesa una frondosa forestación de pino mientras se va ganando altura, faldeando la ladera oriental del cerro **La Mesilla**. El sendero va ganando altura de manera constante, al salir del pinar se puede apreciar hacia el este el **Valle De Calamuchita** y el cordón de las **Sierras Chicas**.\n\nEl punto medio de la primera jornada se cumple al llegar a la estancia **San José**, de la familia López. Es allí donde disfrutaremos del almuerzo.\n\nDesde allí continuaremos en dirección al valle del **Río Tabaquillos**, lugar donde se encuentran los refugios y base del cerro.\n\n- Villa Alpina - Pto. San José - Valle del río El Tabaquillo - Refugios\n- Distancia 13 km aprox.\n- Tiempo de marcha entre 7 a 9 hs.\n"
+      },
+      {
+        "title": "Día 2 - Sábado 12/10",
+        "content": "La segunda jornada es mucho más intensa, debido a que se deben ascender los más de 600 metros de desnivel que se presentan entre la base y la cumbre del cerro, a lo largo de un recorrido de casi 5km, la pendiente es notoriamente más empinada que en la primera jornada, pero es amenizada por el paisaje serrano, el sonido de sus arroyos y la belleza de sus cascadas.\n\nLa cumbre más alta de la provincia de **Córdoba** es bastante particular, ya que presenta la forma de una corona, con una pequeña laguna en su centro. Al recorrer su contorno se pueden apreciar los valles de **Calamuchita** al este, de **Traslasierra** al oeste y **Conlara** al suroeste.\n\nAlmorzamos en la cumbre y luego iniciamos el descenso al refugio.\n\n- Refugio - Cumbre Cerro Champaquí - Refugio\n- Distancia 10 km aprox.\n- Tiempo de marcha entre 10 a 12 hs.\n"
+      },
+      {
+        "title": "Día 3 - Domingo 13/10",
+        "content": "El último día regresamos a **Villa Alpina**, desandando el sendero del primer día parando a almorzar en el refugio de Moisés López.\n\n- Refugio - Puesto Moisés López - Villa Alpina\n- Distancia 13 km aprox.\n- Tiempo de marcha 6 hs.\n"
+      }
+    ],
+    "personalEquipment": "",
+    "includes": "## Incluye\n\n- 2 noches de refugio de montaña\n- Pensión completa\n- Guías de trekking\n- Botiquín grupal de primeros auxilios\n- Comida de marcha\n- Comunicación permanente VHF\n- Servicio de porteo\n\n## No incluye\n\n- Los gastos de viaje hasta Villa Alpina, Córdoba.\n- Equipo individual\n"
+  },
+  {
     "slug": "20240823-aventura-tres-picos",
     "title": "Aventura Tres Picos",
     "startDate": "2024-08-23",
@@ -361,36 +388,5 @@
     ],
     "personalEquipment": "## Equipo personal\n\n- Ropa cómoda (calzas o short)\n- Casco\n- Lentes\n- Gorro para el sol\n- Muda de ropa de recambio\n- Protector solar\n- Recipiente de agua (2lts)\n- Elementos de higiene\n- Toallón\n\n**El equipo será transportado en el vehículo de apoyo.**\n",
     "includes": "## Incluye\n\n- Guías\n- Actividades en planta de campamento - tirolesa, escalada y fogón-\n- Todas las comidas mencionadas en el programa\n- Vehículo de apoyo\n- Una noche de alojamiento en habitaciones compartidas con cama y ducha de agua caliente\n- Colaciones de marcha\n- Equipo de comunicación permanente\n- Botiquín grupal de primeros auxilios\n- Seguros\n\n## No incluye\n\n- Bicicleta\n- Casco (obligatorio)\n- Traslado a la ciudad de Zarate\n\nConsulta por alquiler de bicicleta.\n"
-  },
-  {
-    "slug": "20230218-travesia-rio-quequen-salado",
-    "title": "Travesía: Río Quequén Salado",
-    "startDate": "2023-02-18",
-    "endDate": "2023-02-21",
-    "price": 49800,
-    "img": "/salidas/20230218-travesia-rio-quequen-salado.jpg",
-    "difficulty": "easy",
-    "tags": ["trekking", "tirolesa", "rapel"],
-    "description": "Esta experiencia propone vivir un fin de semana diferente realizando deportes de aventura en pleno contacto con la naturaleza.\n\nUna travesía en kayak recorriendo las corrientes naturales del _Rio Quequén Salado_ navegando por la mayoría de los puntos más atractivos del río. ¡A esto le agregamos actividades de multiaventura y 3 noches en un campamento mil estrellas!\n\nTodo en un lugar por descubrir con mucha historia.\n",
-    "itinerary": [
-      {
-        "title": "Día 1 - 18/02",
-        "content": "Encuentro y presentación del grupo en _Balneario Marisol_.\n\nEl punto de encuentro será en horas de la mañana en el _Balneario Marisol_ donde realizaremos la primera actividad. Un trekking por sus lugares más emblemáticos. Recorriendo sus hermosas playas, bosques, medanos, la desembocadura del _Río Quequén Salado_, el mirador de aves y el cangrejal.\n\nRealizaremos un rico almuerzo en _Marisol_ para recargar energías. Luego nos trasladaremos a _El Puente Viejo_, lugar elegido para instalar nuestro campamento.\n\nEn lo que resta de la tarde tendremos tiempo para descansar, disfrutar de una merienda en el río y presenciar lo que será la fiesta del _Río Quequén Salado_ que se celebra ese mismo día.\n\nLuego disfrutaremos de una rica cena. Descanso.\n"
-      },
-      {
-        "title": "Día 2 - 19/02",
-        "content": "Travesía en kayak. Trayecto 1. Duración 16 km (5/6 horas)\n\nEn horas de la mañana, luego del desayuno. Nos trasladaremos al punto de partida sobre Ruta 3 y _Río Quequén Salado_ - km 531/532- . Luego de una charla técnica, comenzaremos la actividad pudiendo disfrutar en su recorrido de lugares como el puente dinamitado, cascada _Cifuentes_, desembocadura del arroyo indio, puente nuevo hasta llegar a nuestro campamento en _El Puente Viejo_.\n\nAl llegar disfrutaremos del almuerzo y un descanso reparador. Por la tarde realizaremos el circuito de tirolesa y una merienda junto al río. Más tarde realizaremos la visita a la ex usina hidroeléctrica y la fábrica de cal. Cena y descanso.\n"
-      },
-      {
-        "title": "Día 3 - 20/02",
-        "content": "Travesía en kayak. Trayecto 2. Duración 12 km (5 horas)\n\nComenzaremos el día con un rico desayuno. Desde _El Puente Viejo_ comenzaremos el segundo trayecto de la travesía. Llegaremos por la cascada _Mulpunleufu_ antes del mediodía donde disfrutaremos del paisaje y del refrigerio. El final de este trayecto será en la _Cueva Del Tigre_ cerca de las 14 hs.\n\nRegreso al campamento para realizar el almuerzo. Por la tarde luego de un descanso en el río disfrutaremos de una rica merienda y realizaremos la actividad de rappel.\n\nCena despedida con fogón. Descanso.\n"
-      },
-      {
-        "title": "Día 4 - 21/02",
-        "content": "Cansados pero felices disfrutaremos del tradicional **Desayuno Aire Puro**. Cierre y despedida.\n"
-      }
-    ],
-    "personalEquipment": "",
-    "includes": "## Incluye\n\n- Pensión completa (desayuno almuerzo, merienda y cena)\n- 3 noches de campamento con servicios\n- Carpas\n- Guiada interpretativa\n- Equipo de comunicación permanente (VHF)\n- colaciones\n- Seguros\n- Botiquín de primeros auxilios grupal\n- Equipo para todas las actividades: kayaks, casco, remos, cuerdas, etc.\n\n**No incluye el traslado hasta el punto encuentro.**\n"
   }
 ]
