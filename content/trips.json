@@ -1,5 +1,36 @@
 [
   {
+    "slug": "20250301-travesia-rio-quequen-salado",
+    "title": "Travesía: Río Quequén Salado",
+    "startDate": "2025-03-01",
+    "endDate": "2025-03-04",
+    "price": 520500,
+    "img": "/salidas/20250301-travesia-rio-quequen-salado.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking", "tirolesa", "rapel"],
+    "description": "Esta experiencia propone vivir un fin de semana diferente realizando deportes de aventura en pleno contacto con la naturaleza.\n\nUna travesía en kayak recorriendo las corrientes naturales del **Río Quequén Salado** navegando por la mayoría de los puntos más atractivos del rio.\n\n¡A esto le agregamos actividades de multiaventura y 3 noches en un campamento mil estrellas!\n\nTodo en un lugar por descubrir con mucha historia. ¡¡¡No te lo pierdas!!!\n",
+    "itinerary": [
+      {
+        "title": "Día 1 - 01/03",
+        "content": "**Trekking. Horario: 8:00 hs. Duración: 3 horas**\n\nEl punto de encuentro será el playón de la ex estación de servicio en la Ruta Nacional 3, km 531 (luego del cruce a Oriente).\n\nComenzaremos las actividades del fin de semana con un hermoso trekking lleno de historia y naturaleza en el paraje **Molino De Las Rosas** donde conoceremos su historia y ruinas. En el camino, también conoceremos los sucesos históricos que se dieron en el puente de la ruta 3 que cruza el río. En cada parada podremos hidratarnos e informarnos sobre el lugar.\n\nLuego de la actividad, nos dirigiremos a conocer la cascada **La Escondida** ubicada a unos 15 km del punto de encuentro donde disfrutaremos el almuerzo.\n\nLuego de disfrutar este lugar pleno de naturaleza nos dirigiremos a nuestra base de campamento para poder acomodarnos, merendar y disfrutar una visita guiada en la ex usina hidroeléctrica y fábrica de cal. Tendremos tiempo para relajarnos y disfrutar de la base de campamento.\n"
+      },
+      {
+        "title": "Día 2 - 02/03",
+        "content": "**Travesía en kayak. Trayecto 1. Duración: 16 km (5/6 horas)**\n\nLuego de un riquísimo desayuno, partiremos a las 9AM hacia RN3 y **Río Quequén Salado**, donde comenzaremos el primer trayecto de la Travesía RQS, en el recorrido atravesaremos diversos puntos interesantes del río como el **Puente Dinamitado**, **Cascada Cifuentes**, **Desembocadura De Arroyo El Indio** y **Puente Nuevo**, arribando nuevamente a nuestra base de campamento en **Paraje Puente Viejo**.\n\nRealizaremos una parada de descanso en la imponente **Cascada Cifuentes**, la más grande de Bs. As. donde realizaremos el almuerzo. Continuaremos así la travesía hacia el destino, nuestra base de campamento.\n\nLlegaremos horas después del mediodía, donde podremos descansar y disfrutar la merienda para luego disfrutar el camping, higienizarse y prepararse para la cena.\n"
+      },
+      {
+        "title": "Día 3 - 03/03",
+        "content": "**Travesía en kayak. Trayecto 2. Duración: 12 km (5 horas)**\n\nLuego del desayuno, partiremos desde nuestra base de campamento para el segundo trayecto de la Travesía RQS, atravesaremos varías cascadas de pequeño tamaño hasta llegar a la imponente **Cascada Munpuleufú**, donde descansaremos y disfrutaremos su paisaje, además de arrojarse por su pendiente con el kayak.\n\nContinuaremos con la última parte del segundo trayecto hasta llegar al paraje **Cueva Del Tigre**, donde nos recibirán con los autos que nos llevarán nuevamente a la base de campamento para almorzar y disfrutar el resto de la tarde en el paraje. Ya en campamento podremos disfrutar de la gran tirolesa.\n\nCena despedida con fogón. Descanso.\n"
+      },
+      {
+        "title": "Día 4 - 04/03",
+        "content": "Disfrutaremos el desayuno para luego comenzar con la última actividad de aventura. El rapel, un descenso vertical de 10 metros aproximadamente, con las técnicas y equipamiento de seguridad reglamentario. Al finalizar desarmaremos el campamento. Cierre y despedida."
+      }
+    ],
+    "personalEquipment": "## Equipo personal\n\n- Mochila o bolso de 60 litros aprox.\n- Bolsa de dormir\n- Aislante\n- Campera de abrigo\n- Campera impermeable\n- Zapatillas náuticas o viejas para mojar\n- Remeras manga corta y manga larga\n- Botas de trekking o zapatillas deportivas\n- Buzo polar\n- Pantalón de trekking o similar de secado rápido\n- Pantalón corto\n- Traje de baño\n- Ropa interior\n- Lentes para sol\n- Gorra para sol y de abrigo\n- Pañuelo multifunción\n- 3 bolsas de consorcio\n- Rollo de papel higiénico\n- Toallitas húmedas\n- Linternas con pilas de repuesto\n- Termo para agua caliente\n- Botiquín personal\n- Protector solar y labial\n- Repelente para insectos\n- Recipiente para 2 litros de agua\n- Bastones de trekking\n- Recreación personal\n",
+    "includes": "## Incluye\n\n- Pensión completa (desayuno almuerzo, merienda y cena)\n- 3 noches de campamento con servicios\n- Carpas\n- Guiada interpretativa\n- Equipo de comunicación permanente (VHF)\n- Colaciones\n- Seguros\n- Botiquín de primeros auxilios grupal\n- Equipo para todas las actividades: kayaks, casco, remos, cuerdas, etc.\n\n**Opcional bonificado: Noche de camping viernes 28 de febrero.**\n\n## No incluye\n\n- Traslado hasta el punto encuentro\n- Equipo individual\n- Comidas en viaje\n"
+  },
+  {
     "slug": "20241011-ascenso-al-cerro-champaqui",
     "title": "Ascenso al Cerro Champaquí",
     "startDate": "2024-10-11",
