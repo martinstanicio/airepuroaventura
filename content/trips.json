@@ -1,5 +1,68 @@
 [
   {
+    "pending": true,
+    "slug": "20251206-trekking-pueblo-escondido",
+    "title": "Trekking: Pueblo Escondido",
+    "startDate": "2025-12-06",
+    "img": "/salidas/20251206-trekking-pueblo-escondido.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking"]
+  },
+  {
+    "pending": true,
+    "slug": "20251121-ruta-de-los-seismiles",
+    "title": "Ruta de los Seismiles",
+    "startDate": "2025-11-21",
+    "img": "/salidas/20251121-ruta-de-los-seismiles.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking"]
+  },
+  {
+    "pending": true,
+    "slug": "20250815-iruya-nazareno",
+    "title": "Iruya Nazareno",
+    "startDate": "2025-08-15",
+    "img": "/salidas/20250815-iruya-nazareno.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking"]
+  },
+  {
+    "pending": true,
+    "slug": "20250719-travesia-tilcara-calilegua",
+    "title": "Travesía: Tilcara - Calilegua",
+    "startDate": "2025-07-19",
+    "img": "/salidas/20250719-travesia-tilcara-calilegua.jpg",
+    "difficulty": "hard",
+    "tags": ["trekking"]
+  },
+  {
+    "pending": true,
+    "slug": "20250614-aventura-tres-picos",
+    "title": "Aventura Tres Picos",
+    "startDate": "2025-06-14",
+    "img": "/salidas/20250614-aventura-tres-picos.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking"]
+  },
+  {
+    "pending": true,
+    "slug": "20250501-los-gigantes",
+    "title": "Los Gigantes",
+    "startDate": "2025-05-01",
+    "img": "/salidas/20250501-los-gigantes.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking"]
+  },
+  {
+    "pending": true,
+    "slug": "20250322-aventura-tres-picos",
+    "title": "Aventura Tres Picos",
+    "startDate": "2025-03-22",
+    "img": "/salidas/20250322-aventura-tres-picos.jpg",
+    "difficulty": "medium",
+    "tags": ["trekking"]
+  },
+  {
     "slug": "20250301-travesia-rio-quequen-salado",
     "title": "Travesía: Río Quequén Salado",
     "startDate": "2025-03-01",
