@@ -12,7 +12,18 @@ const eventDaySchema = z.object({
   content: z.string(),
 });
 
-const tripSchema = z.object({
+const pendingTripSchema = z.object({
+  pending: z.literal(true),
+  slug: z.string(),
+  title: z.string(),
+  startDate: z.string().date(),
+  img: z.string(),
+  difficulty: difficultySchema,
+  tags: z.array(z.string()),
+});
+
+const notPendingTripSchema = z.object({
+  pending: z.literal(false).default(false),
   slug: z.string(),
   title: z.string(),
   startDate: z.string().date(),
@@ -26,6 +37,8 @@ const tripSchema = z.object({
   personalEquipment: z.string(),
   includes: z.string(),
 });
+
+const tripSchema = z.union([pendingTripSchema, notPendingTripSchema]);
 
 export type Difficulty = z.infer<typeof difficultySchema>;
 export type EventDay = z.infer<typeof eventDaySchema>;
