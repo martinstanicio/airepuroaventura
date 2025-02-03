@@ -1,8 +1,8 @@
 import { micromark } from "micromark";
 
-import { Trip } from "@/lib/trips";
+import { NotPendingTrip } from "@/lib/trips";
 
-export default function TripIncludes({ includes }: Trip) {
+export default function TripIncludes({ includes }: NotPendingTrip) {
   return (
     <section
       className="prose"

@@ -42,6 +42,8 @@ const tripSchema = z.union([pendingTripSchema, notPendingTripSchema]);
 
 export type Difficulty = z.infer<typeof difficultySchema>;
 export type EventDay = z.infer<typeof eventDaySchema>;
+export type PendingTrip = z.infer<typeof pendingTripSchema>;
+export type NotPendingTrip = z.infer<typeof notPendingTripSchema>;
 export type Trip = z.infer<typeof tripSchema>;
 
 export function getDifficultyData(difficulty: Difficulty): {

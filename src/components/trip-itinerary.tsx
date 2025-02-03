@@ -1,8 +1,8 @@
 import { micromark } from "micromark";
 
-import { Trip } from "@/lib/trips";
+import { NotPendingTrip } from "@/lib/trips";
 
-export default function TripItinerary({ itinerary }: Trip) {
+export default function TripItinerary({ itinerary }: NotPendingTrip) {
   return (
     <section className="prose prose-em:text-primary">
       <h2>Itinerario</h2>

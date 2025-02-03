@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@radix-ui/react-accordion";
 
-import { Trip } from "@/lib/trips";
+import { NotPendingTrip } from "@/lib/trips";
 
 import TripDetails from "./trip-details";
 import TripIncludes from "./trip-includes";
@@ -18,7 +18,7 @@ type AccordionEntry = {
   content: React.ReactNode;
 };
 
-export default function TripAccordion({ trip }: { trip: Trip }) {
+export default function TripAccordion({ trip }: { trip: NotPendingTrip }) {
   const content: AccordionEntry[] = [
     {
       id: "details",

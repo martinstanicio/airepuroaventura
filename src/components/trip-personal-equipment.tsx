@@ -1,8 +1,10 @@
 import { micromark } from "micromark";
 
-import { Trip } from "@/lib/trips";
+import { NotPendingTrip } from "@/lib/trips";
 
-export default function TripPersonalEquipment({ personalEquipment }: Trip) {
+export default function TripPersonalEquipment({
+  personalEquipment,
+}: NotPendingTrip) {
   return (
     <section
       className="prose"
