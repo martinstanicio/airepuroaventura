@@ -25,7 +25,7 @@ export interface Props {
 export function generateMetadata({ params }: Props): Metadata {
   const trip = getTrip(params.slug);
 
-  if (!trip) notFound();
+  if (!trip || trip.pending) notFound();
 
   const { title, description, slug, img } = trip;
   const metaDescription = description.split("\n")[0];
@@ -47,7 +47,7 @@ export function generateMetadata({ params }: Props): Metadata {
 export default function TripPage({ params }: Props) {
   const trip = getTrip(params.slug);
 
-  if (!trip) notFound();
+  if (!trip || trip.pending) notFound();
 
   return (
     <article className="container py-8 lg:flex lg:items-start lg:justify-center lg:gap-8">
