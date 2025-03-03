@@ -54,13 +54,31 @@
     "tags": ["trekking"]
   },
   {
-    "pending": true,
     "slug": "20250322-aventura-tres-picos",
     "title": "Aventura Tres Picos",
     "startDate": "2025-03-22",
+    "endDate": "2025-03-24",
+    "price": 295000,
     "img": "/salidas/20250322-aventura-tres-picos.jpg",
     "difficulty": "medium",
-    "tags": ["trekking"]
+    "tags": ["trekking"],
+    "description": "La denominada y conocida **Sierra de la Ventana** está ubicada a unos 625 km al sudoeste de la ciudad de Buenos Aires y pertenece al gran macizo de **Ventania**, uno de los más antiguos del mundo, formado en el Precámbrico, hace más de 500 millones de años.\n\nEn un excepcional marco natural, situada entre valles y sierras, se encuentra la **Estancia Funke**, puerta de acceso a diversas cumbres, donde se destaca el **Cerro Tres Picos**, el punto más alto de la provincia de Buenos Aires, el cual será nuestro objetivo principal.\n\nTe proponemos dentro de nuestro programa dormir en las sierras y conocer la legendaria **Cueva de los Guanacos**. Si te gustan los desafíos en montaña, vení a ponerte a prueba y disfruta de más naturaleza en un lugar simplemente hermoso.\n",
+    "itinerary": [
+      {
+        "title": "Día 1 - Sábado 22/03",
+        "content": "Luego del desayuno comenzaremos un trekking remontando el **Arroyo Napostá** hasta la olla. Podremos disfrutar de una placentera caminata por un lugar lleno de naturaleza en horas de la tarde. Nos alojaremos en las instalaciones del **Refugio Napostá**, donde podremos descansar y disfrutar del entorno natural.\n\n*Incluye cena y alojamiento en refugio.*\n"
+      },
+      {
+        "title": "Día 2 - Domingo 23/03",
+        "content": "Nos levantamos bien temprano, y luego del desayuno, comenzaremos el ascenso para intentar la cumbre al **Cerro Tres Picos**, de 1239 metros, el techo de la provincia de Buenos Aires. Luego realizaremos el descenso y volveremos al **Refugio Napostá** para disfrutar de una rica merienda y unas duchas de agua caliente y descansar del esfuerzo realizado. Una rica comida caliente nos espera para festejar.\n\n*Incluye desayuno, almuerzo, merienda, cena, y alojamiento en refugio.*\n"
+      },
+      {
+        "title": "Día 3 - Lunes 24/03",
+        "content": "Luego del desayuno realizaremos el cierre de la actividad y regreso a nuestros hogares.\n\n*Incluye desayuno.*\n"
+      }
+    ],
+    "personalEquipment": "## Equipo personal\n\n- Mochila de 45+ litros.\n- Bolsa de dormir.\n- Campera de abrigo y campera impermeable.\n- Polar 100 y 200 -fino y grueso-\n- Remeras manga cortas y largas.\n- Pantalón corto y largo.\n- Ropa interior.\n- Medias térmicas.\n- Gorra de sol y de abrigo.\n- Pañuelo, guantes y cuello polar.\n- Zapatillas y/o botas de trekking.\n- 3 bolsas de consorcio.\n- Rollo de papel higiénico y toallitas húmedas.\n- Juego de rancho: plato, cubierto, jarro; y repasador.\n- 2 botellas de para agua -capacidad 2 ¼ litros-\n- Botiquín personal, protector solar y labial -factor alto-\n- Linterna con pilas de repuesto.\n- Lentes para sol (con protección UV).\n- Anotador, birome o marcador.\n- Termo.\n- Bastones.\n- Recreación personal (libro, música, etc.).\n- Cámara de fotos.\n\n**Consultá por alquiler de equipo: bastones, bolsa de dormir, mochila.**\n",
+    "includes": "## Incluye\n\n- 2 noches de alojamiento en refugio agreste con comedor y ducha de agua caliente.\n- Pensión completa -Desayuno, almuerzo, merienda y cena-\n- Colaciones de marcha.\n- Coordinación permanente - Guía de Turismo Aventura y Técnico Superior en Turismo.\n- Botiquín grupal de primeros auxilios.\n- Equipo de comunicación permanente (VHF).\n- Seguros.\n\n**Opcional: alojamiento en refugio gratuito la noche del viernes 21/03.**\n\n## No incluye\n\n- Los gastos de viaje hasta Estancia Funke - Tornquist, provincia de Buenos Aires.\n- Comidas en viaje.\n- Equipo individual.\n"
   },
   {
     "slug": "20250301-travesia-rio-quequen-salado",
