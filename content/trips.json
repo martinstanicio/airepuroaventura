@@ -75,13 +75,31 @@
     "tags": ["trekking"]
   },
   {
-    "pending": true,
     "slug": "20250620-los-gigantes",
     "title": "Los Gigantes",
     "startDate": "2025-06-20",
+    "endDate": "2025-06-22",
+    "price": 315000,
     "img": "/salidas/20250620-los-gigantes.jpg",
     "difficulty": "medium",
-    "tags": ["trekking"]
+    "tags": ["trekking"],
+    "description": "",
+    "itinerary": [
+      {
+        "title": "Día 1 - Viernes 20/06",
+        "content": "Encuentro en el refugio **Casas Nuevas**, lugar donde nos alojaremos; charla de presentación y revisión de equipo. Comenzaremos el trekking por el sendero Norte e intentaremos realizar la cumbre del **Cerro Mogote** de 2.370 metros. Al regreso disfrutaremos de la merienda y un placentero descanso en el refugio con una cena caliente.\n"
+      },
+      {
+        "title": "Día 2 - Sábado 21/06",
+        "content": "Luego del desayuno, comenzaremos un trekking hacia el **Cerro De La Cruz**, Mogote, atravesando diferentes lugares emblemáticos de la zona.\n"
+      },
+      {
+        "title": "Día 3 - Domingo 22/06",
+        "content": "Si el clima lo permite, disfrutaremos de un hermoso amanecer y un desayuno compartido. Cierre de la actividad.\n"
+      }
+    ],
+    "personalEquipment": "## Equipo personal\n\n- Mochila de 45+ litros.\n- Bolsa de dormir.\n- Campera de abrigo y campera impermeable.\n- Polar 100 y 200 -fino y grueso-\n- Remeras manga cortas y largas.\n- Pantalón corto y largo.\n- Ropa interior.\n- Medias térmicas.\n- Gorra de sol y de abrigo.\n- Pañuelo, guantes y cuello polar.\n- Zapatillas y/o botas de trekking.\n- 3 bolsas de consorcio.\n- Rollo de papel higiénico y toallitas húmedas.\n- Juego de rancho: plato, cubierto, jarro; y repasador.\n- 2 botellas de para agua -capacidad 2 ¼ litros-\n- Botiquín personal, protector solar y labial -factor alto-\n- Linterna con pilas de repuesto.\n- Lentes para sol (con protección UV).\n- Anotador, birome o marcador.\n- Termo.\n- Bastones.\n- Recreación personal (libro, música, etc.).\n- Cámara de fotos.\n\n**Consultá por alquiler de equipo: bastones, bolsa de dormir, mochila.**\n",
+    "includes": "## Incluye\n\n- 3 noches de alojamiento en el refugio Casas Nuevas.\n- Pensión completa –Desayuno, almuerzo, merienda y cena–\n- Colaciones de marcha.\n- Coordinación permanente - Guía de Turismo Aventura y Técnico Superior en Turismo.\n- Botiquín grupal de primeros auxilios.\n- Equipo de comunicación permanente (VHF).\n- Seguros.\n\n## No incluye\n\n- Los gastos de viaje hasta Los Gigantes, provincia de Córdoba.\n- Comidas en viaje.\n- Equipo individual.\n"
   },
   {
     "slug": "20250418-aventura-tres-picos",
