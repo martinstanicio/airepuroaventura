@@ -18,13 +18,43 @@
     "tags": ["trekking"]
   },
   {
-    "pending": true,
     "slug": "20250815-iruya-nazareno",
     "title": "Iruya Nazareno",
-    "startDate": "2025-08-15",
+    "startDate": "2025-08-14",
+    "endDate": "2025-08-19",
+    "price": 729000,
     "img": "/salidas/20250815-iruya-nazareno.jpg",
     "difficulty": "medium",
-    "tags": ["trekking"]
+    "tags": ["trekking"],
+    "description": "",
+    "itinerary": [
+      {
+        "title": "Día 1 - Jueves 14/08 - Encuentro en Iruya",
+        "content": "Nos encontramos en el pintoresco pueblo de **Iruya**, entre los cerros del norte salteño. Este primer día está destinado a disfrutar del entorno, caminar por sus calles empedradas y comenzar a prepararnos para la travesía. Realizaremos la presentación del grupo, resolveremos dudas y haremos una revisión general del equipo.\n\nCerramos el día con una cena de bienvenida.\n"
+      },
+      {
+        "title": "Día 2 - Viernes 15/08 - Iruya a Chiyayoc",
+        "content": "Iniciamos nuestra travesía temprano por la mañana, caminando río arriba hacia el norte. Realizamos un ascenso progresivo hasta alcanzar el **Abra Del Colorado**. Desde allí descendemos al **Río San Juan**, donde haremos una pausa para el almuerzo.\n\nContinuamos con un nuevo ascenso y posterior descenso hasta llegar al poblado de **Chiyayoc**, una pequeña comunidad ubicada a 3.100 msnm. La jornada total demanda entre 8 y 9 horas de marcha.\n"
+      },
+      {
+        "title": "Día 3 - Sábado 16/08 - Chiyayoc a Rodeo Colorado",
+        "content": "La jornada comienza con un descenso y faldeo entre cerros, atravesando el valle del **Río Trancas**. A medida que nos alejamos del poblado, retomamos el ascenso por senderos de altura hasta alcanzar los filos que nos regalan una vista espectacular del entorno.\n\nDesde allí, descendemos al **Río Pera** y realizamos el ascenso final hasta el poblado de **Rodeo Colorado**. Es un día largo y desafiante, con un tiempo estimado de caminata de 9 a 10 horas.\n"
+      },
+      {
+        "title": "Día 4 - Domingo 17/08 - Rodeo Colorado a Molinos",
+        "content": "Comenzamos con un pequeño ascenso hasta llegar al poblado de **Abra Del Sauce**. Luego, iniciamos un largo descenso por laderas abiertas hasta alcanzar el **Río Bacoya**, donde almorzamos.\n\nUn último ascenso nos lleva al poblado de **Molinos**, acompañados de una vista privilegiada del valle del **Río Nazareno**. En esta comunidad compartiremos el hospedaje con familias locales.\n"
+      },
+      {
+        "title": "Día 5 - Lunes 18/08 - Molinos a Nazareno",
+        "content": "En la última etapa de la travesía, descendemos hasta la confluencia del **Río Blanco** y el **Río Nazareno**. Luego de cruzar el cauce, iniciamos el ascenso por la falda de la serranía, por un sendero con vistas panorámicas y atravesando parajes como **Los Álamos**.\n\nFinalmente, descendemos nuevamente al **Río Nazareno** y realizamos el ascenso final hasta el pueblo homónimo. Este tramo sigue una antigua senda recientemente reconstruida por la comunidad local.\n"
+      },
+      {
+        "title": "Día 6 - Martes 19/08 - Nazareno a La Quiaca",
+        "content": "Luego del desayuno, tomamos el transporte que nos llevará desde **Nazareno** hasta la localidad de **La Quiaca**, en el extremo norte de Argentina. Allí finaliza nuestra travesía.\n"
+      }
+    ],
+    "personalEquipment": "## Equipo individual (no incluido)\n\n- Mochila de 40/60 litros + mochila o bolso de 60/70 litros.\n- Bolsa de dormir.\n- Envases para almacenar 3 litros de agua por persona (ideal, una bolsa de hidratación de 2 litros).\n- Anteojos de sol con protección UV.\n- Crema protectora solar (factor 50).\n- Equipo de mate + Termo de acero inoxidable (opcional).\n- Bastones de trekking (sí o sí 2 bastones por persona).\n- Cubre mochila impermeable o bolsas de consorcio para impermeabilizar la mochila.\n- Elementos de higiene personal (kit pequeño).\n- Toalla chiquita de secado rápido.\n\n## Vestimenta (no incluida)\n\n### 1ra capa\n\n- 4 remeras interiores \"primera piel\" (manga larga/manga corta).\n- 1 calza térmica tipo \"primera piel\".\n\n### 2 da capa\n\n- 2 buzo polar o camperita de abrigo.\n- 2 pantalones de trekking o tipo deportivos.\n\n### 3 ra capa\n\n- 1 campera abrigada con capucha. Se debe considerar que irá por encima de las otras capas de abrigo y debe quedar cómoda (ideal: campera de pluma o relleno sintético).\n- 1 campera impermeable o piloto de lluvia.\n\n### Para la cabeza\n\n- 1 gorra para protegernos del sol.\n- Cuello multifunción.\n- 1 gorro de abrigo.\n- 1 linterna tipo frontal o de mano con pilas nuevas.\n- 1 par de lentes de sol.\n\n### Para las manos\n\n- 1 par de guantes de abrigo.\n\n### Para los pies\n\n- Botas de trekking.\n- 1 calzado de descanso para el campamento tipo alpargata, Crocs o sandalias.\n- 4 pares de medias finas.\n- 4 pares de medias gruesas.\n\n### Otros\n\n- Bolsas plásticas para autogestionar nuestros residuos.\n- Bolsas para impermeabilizar nuestra ropa en las mochilas.\n- 1 bolsa tipo Ziploc para impermeabilizar nuestros elementos personales como celular, billetera, documentos.\n- 1 tupper plástico para transportar alimentos y usar como plato.\n- Vajilla personal: vaso/taza plástica, tenedor y cuchillo.\n- Repasador.\n- Elementos de recreación personal (libros, cartas etc.).\n",
+    "includes": "## Incluye\n\n- Una noche de estadía en hostel en Iruya.\n- 5 noches de hospedajes simples en casa de familias.\n- Cena de bienvenida.\n- Pensión completa el resto de los días que dura la excursión.\n- Traslado desde Nazareno a Humahuaca.\n- Servicio de porteo para la carga (máximo 8 kg por persona).\n- Coordinación permanente - Guía de Turismo Aventura y Técnico Superior en Turismo.\n- Equipo de comunicación permanente (VHF).\n- Seguros.\n\n## No incluye\n\n- Los gastos de viaje hasta Iruya, provincia de Salta.\n- Entradas a parques nacionales.\n- Gastos ocasionados por contingencias climáticas inesperadas.\n- Gastos ocasionados por el eventual abandono del programa.\n"
   },
   {
     "slug": "20250719-travesia-tilcara-calilegua",
